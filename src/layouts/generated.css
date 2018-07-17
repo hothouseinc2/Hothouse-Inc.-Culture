@@ -4075,14 +4075,6 @@ th {
   stroke: currentColor;
 }
 
-.table-auto {
-  table-layout: auto;
-}
-
-.table-fixed {
-  table-layout: fixed;
-}
-
 .text-left {
   text-align: left;
 }
@@ -7959,14 +7951,6 @@ th {
 
   .sm\-hover\-shadow-none:hover {
     box-shadow: none;
-  }
-
-  .sm\-table-auto {
-    table-layout: auto;
-  }
-
-  .sm\-table-fixed {
-    table-layout: fixed;
   }
 
   .sm\-text-left {
@@ -11848,14 +11832,6 @@ th {
     box-shadow: none;
   }
 
-  .md\-table-auto {
-    table-layout: auto;
-  }
-
-  .md\-table-fixed {
-    table-layout: fixed;
-  }
-
   .md\-text-left {
     text-align: left;
   }
@@ -15735,14 +15711,6 @@ th {
     box-shadow: none;
   }
 
-  .lg\-table-auto {
-    table-layout: auto;
-  }
-
-  .lg\-table-fixed {
-    table-layout: fixed;
-  }
-
   .lg\-text-left {
     text-align: left;
   }
@@ -19620,14 +19588,6 @@ th {
 
   .xl\-hover\-shadow-none:hover {
     box-shadow: none;
-  }
-
-  .xl\-table-auto {
-    table-layout: auto;
-  }
-
-  .xl\-table-fixed {
-    table-layout: fixed;
   }
 
   .xl\-text-left {

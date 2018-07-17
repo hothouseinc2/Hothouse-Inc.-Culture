@@ -4,6 +4,10 @@ import Logo from '../../images/hothouse-logo.svg'
 import Caret from '../../images/caret.svg'
 import Values1 from '../../images/values/icon-values-1.svg'
 import Values2 from '../../images/values/icon-values-2.svg'
+import Values3 from '../../images/values/icon-values-3.svg'
+import Values4 from '../../images/values/icon-values-4.svg'
+import Values5 from '../../images/values/icon-values-5.svg'
+import Values6 from '../../images/values/icon-values-6.svg'
 
 export default class WelcomeSection extends Component {
   render() {
@@ -14,7 +18,7 @@ export default class WelcomeSection extends Component {
           <h1 className="uppercase text-white text-4-5xl text-center">
             Hi, we're Hothouse.
           </h1>
-          <p className="font-sans text-white text-2xl mb-12 leading-normal text-center max-w-md mx-auto">
+          <p className="font-sans text-white px-4 md-px-0 text-xl md-text-2xl mb-12 leading-normal text-center max-w-md mx-auto">
             We rewrite the equations to our clients’ problems, so we can create different
             solutions than everyone else. We employ talent that looks for answers in
             unlikely places. Our people and the culture we’ve made together brings
@@ -54,22 +58,6 @@ export default class WelcomeSection extends Component {
             <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
               <div>
                 <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values1} alt="" />
-                </div>
-                <div className="max-w-xs mx-auto">
-                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
-                    Test Heading
-                  </h3>
-                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
-                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
-                    tacimates cu mei, at posse luptatum.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
-              <div>
-                <div className="mb-8 w-64 h-64 relative mx-auto">
                   <img className="absolute" src={Values2} alt="" />
                 </div>
                 <div className="max-w-xs mx-auto">
@@ -86,7 +74,7 @@ export default class WelcomeSection extends Component {
             <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
               <div>
                 <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values1} alt="" />
+                  <img className="absolute" src={Values3} alt="" />
                 </div>
                 <div className="max-w-xs mx-auto">
                   <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
@@ -102,7 +90,7 @@ export default class WelcomeSection extends Component {
             <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
               <div>
                 <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values1} alt="" />
+                  <img className="absolute" src={Values4} alt="" />
                 </div>
                 <div className="max-w-xs mx-auto">
                   <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
@@ -118,7 +106,23 @@ export default class WelcomeSection extends Component {
             <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
               <div>
                 <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values1} alt="" />
+                  <img className="absolute" src={Values5} alt="" />
+                </div>
+                <div className="max-w-xs mx-auto">
+                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
+                    Test Heading
+                  </h3>
+                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
+                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
+                    tacimates cu mei, at posse luptatum.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
+              <div>
+                <div className="mb-8 w-64 h-64 relative mx-auto">
+                  <img className="absolute" src={Values6} alt="" />
                 </div>
                 <div className="max-w-xs mx-auto">
                   <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
