@@ -868,6 +868,29 @@ th {
   max-width: none;
 }
 
+h2 span {
+  position: relative;
+}
+
+.mission__accents:after,
+.mission__accents:before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  bottom: 50%;
+  margin: 0 auto;
+  width: 50px;
+  background: #4d4d4d;
+}
+
+.mission__accents:before {
+  left: 25px;
+}
+
+.mission__accents:after {
+  right: 25px;
+}
+
 .list-reset {
   list-style: none;
   padding: 0;

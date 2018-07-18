@@ -34,3 +34,29 @@
     max-width: none;
   }
 }
+
+h2 {
+  span {
+    position: relative;
+  }
+}
+
+.mission__accents {
+  &:before, &:after {
+    position: absolute;
+        content: '';
+        height: 1px;
+        bottom: 50%; 
+        margin: 0 auto;
+		  width: 50px;
+		  background: #4D4D4D;
+  }
+
+  &:before {
+    left: 25px;
+  }
+
+   &:after {
+    right: 25px;
+  }
+}

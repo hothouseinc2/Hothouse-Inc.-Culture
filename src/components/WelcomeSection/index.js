@@ -8,6 +8,7 @@ import Values3 from '../../images/values/icon-values-3.svg'
 import Values4 from '../../images/values/icon-values-4.svg'
 import Values5 from '../../images/values/icon-values-5.svg'
 import Values6 from '../../images/values/icon-values-6.svg'
+import Illustration from '../../images/mission/bottom-illustration.svg'
 
 export default class WelcomeSection extends Component {
   render() {
@@ -34,6 +35,17 @@ export default class WelcomeSection extends Component {
           />
         </header>
         <img src={Caret} alt="" className="block my-16 mx-auto" />
+        <section className="mission-section">
+          <h2 className="text-center uppercase mb-32 text-tile-blue max-w-xs mx-auto">
+            <span className="block text-xl mission__accents">Our Mission</span>
+            <div className="text-4xl font-normal">
+              <span className="block">The Unknown</span>
+              <span className="block font-bold">Equals</span>
+              <span className="block">Opportunity</span>
+            </div>
+          </h2>
+          <img className="max-w-3xl px-4 block mx-auto mb-8" src={Illustration} alt=""/>
+        </section>
         <section className="values-section max-w-2xl px-4 md-pd-0 mx-auto pb-16">
           <h2 className="uppercase text-black text-center text-4-5xl mb-32">
             The values that align us.
