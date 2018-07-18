@@ -145,7 +145,7 @@ module.exports = {
   */
 
   fonts: {
-    sans: [
+    heading: [
       'Raleway',
       'Open Sans',
       'system-ui',
@@ -161,7 +161,7 @@ module.exports = {
       'Helvetica Neue',
       'sans-serif'
     ],
-    serif: [
+    copy: [
       'Merriweather',
       'Constantia',
       'Lucida Bright',
@@ -421,6 +421,8 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '120': '30rem',
+    '128': '32rem',
     '1-2': '50%',
     '1-3': '33.33333%',
     '2-3': '66.66667%',
@@ -467,6 +469,8 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '120': '30rem',
+    '128': '32rem',
     full: '100%',
     screen: '100vh'
   },
@@ -588,6 +592,7 @@ module.exports = {
     '8': '2rem',
     '12': '3rem',
     '16': '4rem',
+    '20': '5rem',
     '24': '6rem',
     '32': '8rem',
     '48': '12rem',
@@ -620,7 +625,9 @@ module.exports = {
     '6': '1.5rem',
     '8': '2rem',
     '12': '3rem',
+    '14': '3.5rem',
     '16': '4rem',
+    '20': '5rem',
     '24': '6rem',
     '32': '8rem',
     '48': '12rem',
