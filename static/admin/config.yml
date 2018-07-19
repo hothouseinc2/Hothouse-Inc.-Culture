@@ -1,6 +1,6 @@
 backend:
   # name: github
-  # repo: hothouseinc2/Hothouse-Inc.-Culture
+  repo: hothouseinc2/Hothouse-Inc.-Culture
   name: git-gateway
   branch: master
   accept_roles: #optional - accepts all users if left out
