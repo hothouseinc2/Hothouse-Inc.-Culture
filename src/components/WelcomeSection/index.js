@@ -1,23 +1,39 @@
 import React, { Component } from 'react'
 import Logo from '../../images/hothouse-logo.svg'
 import Caret from '../../images/caret.svg'
-import Values1 from '../../images/values/icon-values-1.svg'
-import Values2 from '../../images/values/icon-values-2.svg'
-import Values3 from '../../images/values/icon-values-3.svg'
-import Values4 from '../../images/values/icon-values-4.svg'
-import Values5 from '../../images/values/icon-values-5.svg'
-import Values6 from '../../images/values/icon-values-6.svg'
 import Illustration from '../../images/mission/bottom-illustration.svg'
 import MiddleClouds from '../../images/mission/middle-clouds.svg'
 import Tiles from '../Tiles'
+
 export default class WelcomeSection extends Component {
-  constructor(props) {
-    super(props)
-    // this.state = {
-    //   hover
-    // }
-  }
   render() {
+    let values = this.props.values.map((i, index) => (
+      <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
+        <div>
+          <div className="mb-8 w-64 h-64 relative mx-auto">
+            <img className="absolute" src={i.icon} alt="" />
+          </div>
+          <div className="max-w-xs mx-auto">
+            <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
+              {i.heading}
+            </h3>
+            <p className="text-lg md-text-xl text-black-lighter leading-tight">
+              {i.description}
+            </p>
+          </div>
+        </div>
+      </li>
+    ))
+
+    let benefits = this.props.benefits.map((i, index) => (
+      <Tiles
+        key={index}
+        title={i.title}
+        imageURL={i.imageURL}
+        description={i.description}
+        color={i.color}
+      />
+    ))
     return (
       <div className="welcome-section bg-welcome-gradient pt-32">
         <header>
@@ -69,102 +85,7 @@ export default class WelcomeSection extends Component {
             The values that align us.
           </h2>
           <ul className="flex flex-col md-flex-row flex-wrap list-reset text-center">
-            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
-              <div>
-                <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values1} alt="" />
-                </div>
-                <div className="max-w-xs mx-auto">
-                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
-                    Test Heading
-                  </h3>
-                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
-                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
-                    tacimates cu mei, at posse luptatum.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
-              <div>
-                <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values2} alt="" />
-                </div>
-                <div className="max-w-xs mx-auto">
-                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
-                    Test Heading
-                  </h3>
-                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
-                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
-                    tacimates cu mei, at posse luptatum.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
-              <div>
-                <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values3} alt="" />
-                </div>
-                <div className="max-w-xs mx-auto">
-                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
-                    Test Heading
-                  </h3>
-                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
-                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
-                    tacimates cu mei, at posse luptatum.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
-              <div>
-                <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values4} alt="" />
-                </div>
-                <div className="max-w-xs mx-auto">
-                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
-                    Test Heading
-                  </h3>
-                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
-                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
-                    tacimates cu mei, at posse luptatum.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
-              <div>
-                <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values5} alt="" />
-                </div>
-                <div className="max-w-xs mx-auto">
-                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
-                    Test Heading
-                  </h3>
-                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
-                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
-                    tacimates cu mei, at posse luptatum.
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li className="w-full md-w-1-2 lg-w-1-3 mb-32">
-              <div>
-                <div className="mb-8 w-64 h-64 relative mx-auto">
-                  <img className="absolute" src={Values6} alt="" />
-                </div>
-                <div className="max-w-xs mx-auto">
-                  <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
-                    Test Heading
-                  </h3>
-                  <p className="text-lg md-text-xl text-black-lighter leading-tight">
-                    Lorem ipsum dolor sit amet, natum mollis mediocritatem eam cu. Utamur
-                    tacimates cu mei, at posse luptatum.
-                  </p>
-                </div>
-              </div>
-            </li>
+            {values}
           </ul>
           <img src={Caret} alt="" className="block my-16 mx-auto" />
         </section>
@@ -175,8 +96,10 @@ export default class WelcomeSection extends Component {
           <h3 className="text-grey text-lg md-text-2xl font-semibold text-grey-darker text-center mb-20 px-4">
             Building a unique work environment takes a team effort.
           </h3>
-          <div className="mx-auto max-w-xl">
-            <Tiles />
+          <div className="mx-auto max-w-xl px-4 md-px-0">
+            <ul className="flex flex-col md-flex-row md-flex-wrap -mx-4 px-8 md-px-4 lg-px-0">
+              {benefits}
+            </ul>
           </div>
         </section>
       </div>
