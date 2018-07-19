@@ -95,11 +95,17 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
+        path: `${__dirname}/src/images`,
         name: 'images'
       }
     },
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: []
+      }
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify` // make sure to put last in the array
   ]
