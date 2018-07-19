@@ -852,11 +852,23 @@ th {
   padding: 0;
 }
 
+body {
+  font-family: Proxima Nova, Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.culture-nav {
+  background: rgba(65, 89, 116, .5);
+}
+
 .bg-welcome-gradient {
   background: #79adb9;
-  background: -moz-linear-gradient(top, #63afbb 0, #8ac6ce 25%, #cde3e5 56%, #fff 100%);
-  background: -webkit-linear-gradient(top, #63afbb, #8ac6ce 25%, #cde3e5 76%, #fff);
-  background: linear-gradient(180deg, #63afbb 0, #8ac6ce 25%, #cde3e5 76%, #fff);
+  background: -moz-linear-gradient(top, #63afbb 0, #8ac6ce 25%, #cde3e5 30%, #fff 100%);
+  background: -webkit-linear-gradient(top, #63afbb, #8ac6ce 25%, #cde3e5 30%, #fff);
+  background: linear-gradient(180deg, #63afbb 0, #8ac6ce 25%, #cde3e5 30%, #fff);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#79adb9", endColorstr="#f2f2f2", GradientType=0);
 }
 
@@ -893,6 +905,12 @@ h2 span {
 
 .mission-section__middle-clouds {
   bottom: -50px;
+  min-width: 1000px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .tile-transparent {
@@ -2483,7 +2501,7 @@ h2 span {
 }
 
 .font-heading {
-  font-family: Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Proxima Nova, Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-copy {
@@ -2618,6 +2636,10 @@ h2 span {
   height: 16rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-120 {
   height: 30rem;
 }
@@ -2684,6 +2706,10 @@ h2 span {
 
 .m-8 {
   margin: 2rem;
+}
+
+.m-10 {
+  margin: 2.6875rem;
 }
 
 .m-12 {
@@ -2794,6 +2820,16 @@ h2 span {
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.my-10 {
+  margin-top: 2.6875rem;
+  margin-bottom: 2.6875rem;
+}
+
+.mx-10 {
+  margin-left: 2.6875rem;
+  margin-right: 2.6875rem;
 }
 
 .my-12 {
@@ -3006,6 +3042,22 @@ h2 span {
 
 .ml-8 {
   margin-left: 2rem;
+}
+
+.mt-10 {
+  margin-top: 2.6875rem;
+}
+
+.mr-10 {
+  margin-right: 2.6875rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.6875rem;
+}
+
+.ml-10 {
+  margin-left: 2.6875rem;
 }
 
 .mt-12 {
@@ -3666,6 +3718,10 @@ h2 span {
   padding: 2rem;
 }
 
+.p-10 {
+  padding: 2.6875rem;
+}
+
 .p-12 {
   padding: 3rem;
 }
@@ -3766,6 +3822,16 @@ h2 span {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-10 {
+  padding-top: 2.6875rem;
+  padding-bottom: 2.6875rem;
+}
+
+.px-10 {
+  padding-left: 2.6875rem;
+  padding-right: 2.6875rem;
 }
 
 .py-12 {
@@ -3958,6 +4024,22 @@ h2 span {
 
 .pl-8 {
   padding-left: 2rem;
+}
+
+.pt-10 {
+  padding-top: 2.6875rem;
+}
+
+.pr-10 {
+  padding-right: 2.6875rem;
+}
+
+.pb-10 {
+  padding-bottom: 2.6875rem;
+}
+
+.pl-10 {
+  padding-left: 2.6875rem;
 }
 
 .pt-12 {
@@ -4824,6 +4906,10 @@ h2 span {
 
 .w-64 {
   width: 16rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .w-120 {
@@ -6483,7 +6569,7 @@ h2 span {
   }
 
   .sm\-font-heading {
-    font-family: Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Proxima Nova, Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .sm\-font-copy {
@@ -6618,6 +6704,10 @@ h2 span {
     height: 16rem;
   }
 
+  .sm\-h-96 {
+    height: 24rem;
+  }
+
   .sm\-h-120 {
     height: 30rem;
   }
@@ -6684,6 +6774,10 @@ h2 span {
 
   .sm\-m-8 {
     margin: 2rem;
+  }
+
+  .sm\-m-10 {
+    margin: 2.6875rem;
   }
 
   .sm\-m-12 {
@@ -6794,6 +6888,16 @@ h2 span {
   .sm\-mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .sm\-my-10 {
+    margin-top: 2.6875rem;
+    margin-bottom: 2.6875rem;
+  }
+
+  .sm\-mx-10 {
+    margin-left: 2.6875rem;
+    margin-right: 2.6875rem;
   }
 
   .sm\-my-12 {
@@ -7006,6 +7110,22 @@ h2 span {
 
   .sm\-ml-8 {
     margin-left: 2rem;
+  }
+
+  .sm\-mt-10 {
+    margin-top: 2.6875rem;
+  }
+
+  .sm\-mr-10 {
+    margin-right: 2.6875rem;
+  }
+
+  .sm\-mb-10 {
+    margin-bottom: 2.6875rem;
+  }
+
+  .sm\-ml-10 {
+    margin-left: 2.6875rem;
   }
 
   .sm\-mt-12 {
@@ -7658,6 +7778,10 @@ h2 span {
     padding: 2rem;
   }
 
+  .sm\-p-10 {
+    padding: 2.6875rem;
+  }
+
   .sm\-p-12 {
     padding: 3rem;
   }
@@ -7758,6 +7882,16 @@ h2 span {
   .sm\-px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .sm\-py-10 {
+    padding-top: 2.6875rem;
+    padding-bottom: 2.6875rem;
+  }
+
+  .sm\-px-10 {
+    padding-left: 2.6875rem;
+    padding-right: 2.6875rem;
   }
 
   .sm\-py-12 {
@@ -7950,6 +8084,22 @@ h2 span {
 
   .sm\-pl-8 {
     padding-left: 2rem;
+  }
+
+  .sm\-pt-10 {
+    padding-top: 2.6875rem;
+  }
+
+  .sm\-pr-10 {
+    padding-right: 2.6875rem;
+  }
+
+  .sm\-pb-10 {
+    padding-bottom: 2.6875rem;
+  }
+
+  .sm\-pl-10 {
+    padding-left: 2.6875rem;
   }
 
   .sm\-pt-12 {
@@ -8808,6 +8958,10 @@ h2 span {
 
   .sm\-w-64 {
     width: 16rem;
+  }
+
+  .sm\-w-96 {
+    width: 24rem;
   }
 
   .sm\-w-120 {
@@ -10468,7 +10622,7 @@ h2 span {
   }
 
   .md\-font-heading {
-    font-family: Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Proxima Nova, Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .md\-font-copy {
@@ -10603,6 +10757,10 @@ h2 span {
     height: 16rem;
   }
 
+  .md\-h-96 {
+    height: 24rem;
+  }
+
   .md\-h-120 {
     height: 30rem;
   }
@@ -10669,6 +10827,10 @@ h2 span {
 
   .md\-m-8 {
     margin: 2rem;
+  }
+
+  .md\-m-10 {
+    margin: 2.6875rem;
   }
 
   .md\-m-12 {
@@ -10779,6 +10941,16 @@ h2 span {
   .md\-mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .md\-my-10 {
+    margin-top: 2.6875rem;
+    margin-bottom: 2.6875rem;
+  }
+
+  .md\-mx-10 {
+    margin-left: 2.6875rem;
+    margin-right: 2.6875rem;
   }
 
   .md\-my-12 {
@@ -10991,6 +11163,22 @@ h2 span {
 
   .md\-ml-8 {
     margin-left: 2rem;
+  }
+
+  .md\-mt-10 {
+    margin-top: 2.6875rem;
+  }
+
+  .md\-mr-10 {
+    margin-right: 2.6875rem;
+  }
+
+  .md\-mb-10 {
+    margin-bottom: 2.6875rem;
+  }
+
+  .md\-ml-10 {
+    margin-left: 2.6875rem;
   }
 
   .md\-mt-12 {
@@ -11643,6 +11831,10 @@ h2 span {
     padding: 2rem;
   }
 
+  .md\-p-10 {
+    padding: 2.6875rem;
+  }
+
   .md\-p-12 {
     padding: 3rem;
   }
@@ -11743,6 +11935,16 @@ h2 span {
   .md\-px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\-py-10 {
+    padding-top: 2.6875rem;
+    padding-bottom: 2.6875rem;
+  }
+
+  .md\-px-10 {
+    padding-left: 2.6875rem;
+    padding-right: 2.6875rem;
   }
 
   .md\-py-12 {
@@ -11935,6 +12137,22 @@ h2 span {
 
   .md\-pl-8 {
     padding-left: 2rem;
+  }
+
+  .md\-pt-10 {
+    padding-top: 2.6875rem;
+  }
+
+  .md\-pr-10 {
+    padding-right: 2.6875rem;
+  }
+
+  .md\-pb-10 {
+    padding-bottom: 2.6875rem;
+  }
+
+  .md\-pl-10 {
+    padding-left: 2.6875rem;
   }
 
   .md\-pt-12 {
@@ -12793,6 +13011,10 @@ h2 span {
 
   .md\-w-64 {
     width: 16rem;
+  }
+
+  .md\-w-96 {
+    width: 24rem;
   }
 
   .md\-w-120 {
@@ -14453,7 +14675,7 @@ h2 span {
   }
 
   .lg\-font-heading {
-    font-family: Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Proxima Nova, Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .lg\-font-copy {
@@ -14588,6 +14810,10 @@ h2 span {
     height: 16rem;
   }
 
+  .lg\-h-96 {
+    height: 24rem;
+  }
+
   .lg\-h-120 {
     height: 30rem;
   }
@@ -14654,6 +14880,10 @@ h2 span {
 
   .lg\-m-8 {
     margin: 2rem;
+  }
+
+  .lg\-m-10 {
+    margin: 2.6875rem;
   }
 
   .lg\-m-12 {
@@ -14764,6 +14994,16 @@ h2 span {
   .lg\-mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .lg\-my-10 {
+    margin-top: 2.6875rem;
+    margin-bottom: 2.6875rem;
+  }
+
+  .lg\-mx-10 {
+    margin-left: 2.6875rem;
+    margin-right: 2.6875rem;
   }
 
   .lg\-my-12 {
@@ -14976,6 +15216,22 @@ h2 span {
 
   .lg\-ml-8 {
     margin-left: 2rem;
+  }
+
+  .lg\-mt-10 {
+    margin-top: 2.6875rem;
+  }
+
+  .lg\-mr-10 {
+    margin-right: 2.6875rem;
+  }
+
+  .lg\-mb-10 {
+    margin-bottom: 2.6875rem;
+  }
+
+  .lg\-ml-10 {
+    margin-left: 2.6875rem;
   }
 
   .lg\-mt-12 {
@@ -15628,6 +15884,10 @@ h2 span {
     padding: 2rem;
   }
 
+  .lg\-p-10 {
+    padding: 2.6875rem;
+  }
+
   .lg\-p-12 {
     padding: 3rem;
   }
@@ -15728,6 +15988,16 @@ h2 span {
   .lg\-px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\-py-10 {
+    padding-top: 2.6875rem;
+    padding-bottom: 2.6875rem;
+  }
+
+  .lg\-px-10 {
+    padding-left: 2.6875rem;
+    padding-right: 2.6875rem;
   }
 
   .lg\-py-12 {
@@ -15920,6 +16190,22 @@ h2 span {
 
   .lg\-pl-8 {
     padding-left: 2rem;
+  }
+
+  .lg\-pt-10 {
+    padding-top: 2.6875rem;
+  }
+
+  .lg\-pr-10 {
+    padding-right: 2.6875rem;
+  }
+
+  .lg\-pb-10 {
+    padding-bottom: 2.6875rem;
+  }
+
+  .lg\-pl-10 {
+    padding-left: 2.6875rem;
   }
 
   .lg\-pt-12 {
@@ -16778,6 +17064,10 @@ h2 span {
 
   .lg\-w-64 {
     width: 16rem;
+  }
+
+  .lg\-w-96 {
+    width: 24rem;
   }
 
   .lg\-w-120 {
@@ -18438,7 +18728,7 @@ h2 span {
   }
 
   .xl\-font-heading {
-    font-family: Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: Proxima Nova, Raleway, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
   .xl\-font-copy {
@@ -18573,6 +18863,10 @@ h2 span {
     height: 16rem;
   }
 
+  .xl\-h-96 {
+    height: 24rem;
+  }
+
   .xl\-h-120 {
     height: 30rem;
   }
@@ -18639,6 +18933,10 @@ h2 span {
 
   .xl\-m-8 {
     margin: 2rem;
+  }
+
+  .xl\-m-10 {
+    margin: 2.6875rem;
   }
 
   .xl\-m-12 {
@@ -18749,6 +19047,16 @@ h2 span {
   .xl\-mx-8 {
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .xl\-my-10 {
+    margin-top: 2.6875rem;
+    margin-bottom: 2.6875rem;
+  }
+
+  .xl\-mx-10 {
+    margin-left: 2.6875rem;
+    margin-right: 2.6875rem;
   }
 
   .xl\-my-12 {
@@ -18961,6 +19269,22 @@ h2 span {
 
   .xl\-ml-8 {
     margin-left: 2rem;
+  }
+
+  .xl\-mt-10 {
+    margin-top: 2.6875rem;
+  }
+
+  .xl\-mr-10 {
+    margin-right: 2.6875rem;
+  }
+
+  .xl\-mb-10 {
+    margin-bottom: 2.6875rem;
+  }
+
+  .xl\-ml-10 {
+    margin-left: 2.6875rem;
   }
 
   .xl\-mt-12 {
@@ -19613,6 +19937,10 @@ h2 span {
     padding: 2rem;
   }
 
+  .xl\-p-10 {
+    padding: 2.6875rem;
+  }
+
   .xl\-p-12 {
     padding: 3rem;
   }
@@ -19713,6 +20041,16 @@ h2 span {
   .xl\-px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .xl\-py-10 {
+    padding-top: 2.6875rem;
+    padding-bottom: 2.6875rem;
+  }
+
+  .xl\-px-10 {
+    padding-left: 2.6875rem;
+    padding-right: 2.6875rem;
   }
 
   .xl\-py-12 {
@@ -19905,6 +20243,22 @@ h2 span {
 
   .xl\-pl-8 {
     padding-left: 2rem;
+  }
+
+  .xl\-pt-10 {
+    padding-top: 2.6875rem;
+  }
+
+  .xl\-pr-10 {
+    padding-right: 2.6875rem;
+  }
+
+  .xl\-pb-10 {
+    padding-bottom: 2.6875rem;
+  }
+
+  .xl\-pl-10 {
+    padding-left: 2.6875rem;
   }
 
   .xl\-pt-12 {
@@ -20763,6 +21117,10 @@ h2 span {
 
   .xl\-w-64 {
     width: 16rem;
+  }
+
+  .xl\-w-96 {
+    width: 24rem;
   }
 
   .xl\-w-120 {

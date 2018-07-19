@@ -4,7 +4,7 @@
   "version": "1.1.0",
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
-    "gatsby": "^1.9.241",
+    "gatsby": "^1.9.274",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-netlify": "^1.0.21",

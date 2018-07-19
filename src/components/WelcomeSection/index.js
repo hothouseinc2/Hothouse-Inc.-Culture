@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
 import Logo from '../../images/hothouse-logo.svg'
 import Caret from '../../images/caret.svg'
 import Values1 from '../../images/values/icon-values-1.svg'
@@ -21,16 +20,16 @@ export default class WelcomeSection extends Component {
       <div className="welcome-section bg-welcome-gradient pt-32">
         <header>
           <img src={Logo} alt="" className="block mx-auto mb-12" />
-          <h1 className="uppercase text-white text-4-5xl text-center">
+          <h1 className="uppercase text-white text-2xl md-text-4-5xl text-center">
             Hi, we're Hothouse.
           </h1>
-          <p className="font-sans text-white px-4 md-px-0 text-xl md-text-2xl mb-12 leading-normal text-center max-w-md mx-auto">
+          <p className="font-sans text-white px-4 md-px-0 text-lg md-text-2xl mb-12 leading-normal text-center max-w-md mx-auto">
             We rewrite the equations to our clients’ problems, so we can create different
             solutions than everyone else. We employ talent that looks for answers in
             unlikely places. Our people and the culture we’ve made together brings
             unexpected thinking to all our clients’ challenges.
           </p>
-          <p className="mb-8 font-sans text-white text-xl mb-12 leading-normal text-center max-w-md mx-auto font-bold">
+          <p className="mb-8 font-sans text-white tracking-normal text-xl mb-12 leading-normal text-center max-w-md mx-auto font-bold">
             Take a look at who we are:
           </p>
           <img
@@ -51,7 +50,7 @@ export default class WelcomeSection extends Component {
               <span className="block text-xl mission__accents text-hothouse">
                 Our Mission
               </span>
-              <div className="text-4xl font-normal">
+              <div className="text-2xl md-text-4-5xl font-normal">
                 <span className="block">The Unknown</span>
                 <span className="block font-bold">Equals</span>
                 <span className="block">Opportunity</span>
@@ -172,44 +171,81 @@ export default class WelcomeSection extends Component {
           <h2 className="text-black uppercase text-4-5xl text-center max-w-md mx-auto mb-4">
             Our Agency Culture is Authentically Cultivated.
           </h2>
-          <h3 className="text-grey text-2xl font-semibold text-grey-darker text-center mb-20">
+          <h3 className="text-grey text-lg md-text-2xl font-semibold text-grey-darker text-center mb-20 px-4">
             Building a unique work environment takes a team effort.
           </h3>
-
-          <ul className="flex flex-col md-flex-row md-flex-wrap max-w-2xl mx-auto">
-            <li className="relative w-120 h-120 max-w-full list-reset mx-auto md-w-1-2">
-              <div className="absolute z-0">
-                <img className="max-w-full" src={HappyTogether} alt="" />
-              </div>
-              <div className="relative z-20 tile-transparent hothouse">
-                <h4>Untapped Opportunities</h4>
-              </div>
-            </li>
-            <li className="relative w-120 h-120 list-reset mx-auto md-w-1-2">
-              <div className="absolute z-0">
-                <img className="max-w-full" src={WorkLife} alt="" />
-              </div>
-              <div className="relative z-20 tile-transparent pink">
-                <h4>Work - Life Balance</h4>
-              </div>
-            </li>
-            <li className="relative w-120 h-120 list-reset mx-auto md-w-1-2">
-              <div className="absolute z-0">
-                <img className="max-w-full" src={Oppotunities} alt="" />
-              </div>
-              <div className="relative z-20 tile-transparent orange">
-                <h4>Lifelong Learning</h4>
-              </div>
-            </li>
-            <li className="relative w-120 h-120 list-reset mx-auto md-w-1-2">
-              <div className="absolute z-0">
-                <img className="max-w-full" src={LifeLong} alt="" />
-              </div>
-              <div className="relative z-20 tile-transparent blue">
-                <h4>Happy Together</h4>
-              </div>
-            </li>
-          </ul>
+          <div className="mx-auto max-w-xl">
+            <ul className="flex flex-col md-flex-row md-flex-wrap -mx-4 px-4 lg-px-0">
+              <li className="w-96 h-96 lg-w-120 lg-h-120 relative list-reset mx-auto px-2 max-w-full md-px-4 mb-8 cursor-pointer">
+                <div
+                  className="h-full mx-auto flex flex-col flex-wrap justify-end"
+                  style={{
+                    backgroundImage: 'url(' + Oppotunities + ')',
+                    backgroundSize: 'cover'
+                  }}
+                >
+                  <div className="w-full">
+                    <div className="h-16 md-h-32 w-full flex items-center z-20 tile-transparent hothouse px-4">
+                      <h4 className="text-white max-w-xs text-xl md-text-4xl uppercase font-thin py-10">
+                        Untapped Opportunities
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className="w-96 h-96 lg-w-120 lg-h-120 relative list-reset mx-auto px-2 max-w-full md-px-4 mb-8 cursor-pointer">
+                <div
+                  className="h-full mx-auto flex flex-col flex-wrap justify-end"
+                  style={{
+                    backgroundImage: 'url(' + WorkLife + ')',
+                    backgroundSize: 'cover'
+                  }}
+                >
+                  <div className="w-full">
+                    <div className="h-16 md-h-32 w-full flex items-center z-20 tile-transparent pink px-4">
+                      <h4 className="max-w-xs text-white text-xl md-text-4xl uppercase font-thin py-10">
+                        Work - Life Balance
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className="w-96 h-96 lg-w-120 lg-h-120 relative list-reset mx-auto px-2 max-w-full md-px-4 mb-8 cursor-pointer">
+                <div
+                  className="h-full mx-auto flex flex-col flex-wrap justify-end"
+                  style={{
+                    backgroundImage: 'url(' + LifeLong + ')',
+                    backgroundSize: 'cover'
+                  }}
+                >
+                  <div className="w-full">
+                    <div className="h-16 md-h-32 w-full flex items-center z-20 tile-transparent orange px-4">
+                      <h4 className="max-w-xs text-white text-xl md-text-4xl uppercase font-thin py-10">
+                        Lifelong Learning
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li className="w-96 h-96 lg-w-120 lg-h-120 relative list-reset mx-auto px-2 max-w-full md-px-4 mb-8 cursor-pointer">
+                <div
+                  className="h-full mx-auto flex flex-col flex-wrap justify-end"
+                  style={{
+                    backgroundImage: 'url(' + HappyTogether + ')',
+                    backgroundSize: 'cover'
+                  }}
+                >
+                  <div className="w-full">
+                    <div className="h-16 md-h-32 w-full flex items-center z-20 tile-transparent blue px-4">
+                      <h4 className="max-w-xs text-white text-xl md-text-4xl uppercase font-thin py-10">
+                        Happy Together
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     )

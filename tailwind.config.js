@@ -146,6 +146,7 @@ module.exports = {
 
   fonts: {
     heading: [
+      'Proxima Nova',
       'Raleway',
       'Open Sans',
       'system-ui',
@@ -421,6 +422,7 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '96': '24rem',
     '120': '30rem',
     '128': '32rem',
     '1-2': '50%',
@@ -469,6 +471,7 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '96': '24rem',
     '120': '30rem',
     '128': '32rem',
     full: '100%',
@@ -590,6 +593,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10': '2.6875rem',
     '12': '3rem',
     '16': '4rem',
     '20': '5rem',
@@ -624,6 +628,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10': '2.6875rem',
     '12': '3rem',
     '14': '3.5rem',
     '16': '4rem',

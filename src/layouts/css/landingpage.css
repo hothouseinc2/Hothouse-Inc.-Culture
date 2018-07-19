@@ -1,3 +1,7 @@
+.culture-nav {
+  background: rgba(65, 89, 116, 0.5);
+}
+
 .bg-welcome-gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#79adb9+0,8ac6ce+25,cde3e5+76,f2f2f2+100 */
   background: #79adb9; /* Old browsers */
@@ -5,21 +9,21 @@
     top,
     #63afbb 0%,
     #8ac6ce 25%,
-    #cde3e5 56%,
+    #cde3e5 30%,
     #ffffff 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
     #63afbb 0%,
     #8ac6ce 25%,
-    #cde3e5 76%,
+    #cde3e5 30%,
     #ffffff 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
     #63afbb 0%,
     #8ac6ce 25%,
-    #cde3e5 76%,
+    #cde3e5 30%,
     #ffffff 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79adb9', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
@@ -64,6 +68,12 @@ h2 {
 
 .mission-section__middle-clouds {
   bottom: -50px;
+  min-width: 1000px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .tile-transparent {
