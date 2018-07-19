@@ -98,7 +98,7 @@ export default class WelcomeSection extends Component {
           </h3>
           <div className="mx-auto max-w-xl px-4 md-px-0">
             <ul className="flex flex-col md-flex-row md-flex-wrap -mx-4 px-8 md-px-4 lg-px-0">
-              {benefits}
+              {benefits}{' '}
             </ul>
           </div>
         </section>
