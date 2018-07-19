@@ -1,0 +1,113 @@
+.culture-nav {
+  background: rgba(65, 89, 116, 0.5);
+}
+
+.bg-welcome-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#55bbc5+0,55bbc5+28,afdde0+41,f2f2f2+61,e5e5e5+79,ffffff+100 */
+  background: #55bbc5; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #55bbc5 0%,
+    #55bbc5 28%,
+    #afdde0 41%,
+    #f2f2f2 61%,
+    #ffffff 79%,
+    #ffffff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #55bbc5 0%,
+    #55bbc5 28%,
+    #afdde0 41%,
+    #f2f2f2 61%,
+    #ffffff 79%,
+    #ffffff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #55bbc5 0%,
+    #55bbc5 28%,
+    #afdde0 41%,
+    #f2f2f2 61%,
+    #ffffff 79%,
+    #ffffff 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55bbc5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.values-section {
+  ul img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: none;
+  }
+}
+
+h2 {
+  span {
+    position: relative;
+  }
+}
+
+.mission__accents {
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    bottom: 50%;
+    margin: 0 auto;
+    width: 50px;
+    background: #4d4d4d;
+  }
+
+  &:before {
+    left: 25px;
+  }
+
+  &:after {
+    right: 25px;
+  }
+}
+
+.mission-section__middle-clouds {
+  bottom: -50px;
+  min-width: 1000px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.tile-transparent {
+  @apply w-full;
+
+  &.pink {
+    background: rgba(212, 121, 130, 0.5);
+  }
+
+  &.blue {
+    background: rgba(65, 89, 116, 0.5);
+  }
+
+  &.hothouse {
+    background: rgba(119, 194, 200, 0.5);
+  }
+  &.orange {
+    background: rgba(235, 159, 107, 0.5);
+  }
+}
+
+.tile__slide {
+  transition: all 0.5s ease;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.tile__slide.tile__slide--present {
+  opacity: 1;
+  transform: translateX(0%);
+}

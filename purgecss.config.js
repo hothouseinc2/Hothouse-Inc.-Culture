@@ -6,10 +6,10 @@ module.exports = {
     {
       extractor: class {
         static extract(content) {
-          return content.match(/[A-z0-9-:\/]+/g)
+          return content.match(/[A-z0-9-:\/]+/g) || []
         }
       },
-      extensions: ['html', 'js'],
-    },
-  ],
+      extensions: ['html', 'js']
+    }
+  ]
 }
