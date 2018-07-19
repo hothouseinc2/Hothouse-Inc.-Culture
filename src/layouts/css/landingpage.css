@@ -3,30 +3,36 @@
 }
 
 .bg-welcome-gradient {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#79adb9+0,8ac6ce+25,cde3e5+76,f2f2f2+100 */
-  background: #79adb9; /* Old browsers */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#55bbc5+0,55bbc5+28,afdde0+41,f2f2f2+61,e5e5e5+79,ffffff+100 */
+  background: #55bbc5; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    #63afbb 0%,
-    #8ac6ce 25%,
-    #cde3e5 30%,
+    #55bbc5 0%,
+    #55bbc5 28%,
+    #afdde0 41%,
+    #f2f2f2 61%,
+    #ffffff 79%,
     #ffffff 100%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #63afbb 0%,
-    #8ac6ce 25%,
-    #cde3e5 30%,
+    #55bbc5 0%,
+    #55bbc5 28%,
+    #afdde0 41%,
+    #f2f2f2 61%,
+    #ffffff 79%,
     #ffffff 100%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    #63afbb 0%,
-    #8ac6ce 25%,
-    #cde3e5 30%,
+    #55bbc5 0%,
+    #55bbc5 28%,
+    #afdde0 41%,
+    #f2f2f2 61%,
+    #ffffff 79%,
     #ffffff 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#79adb9', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55bbc5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 .values-section {
@@ -93,4 +99,13 @@ h2 {
   &.orange {
     background: rgba(235, 159, 107, 0.5);
   }
+}
+
+.tile__slide {
+  transition: all 0.5s ease;
+  transform: translateX(0);
+}
+
+.tile__slide.tile__slide--present {
+  transform: translateX(0);
 }

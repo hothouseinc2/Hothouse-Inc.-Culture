@@ -865,11 +865,11 @@ ul {
 }
 
 .bg-welcome-gradient {
-  background: #79adb9;
-  background: -moz-linear-gradient(top, #63afbb 0, #8ac6ce 25%, #cde3e5 30%, #fff 100%);
-  background: -webkit-linear-gradient(top, #63afbb, #8ac6ce 25%, #cde3e5 30%, #fff);
-  background: linear-gradient(180deg, #63afbb 0, #8ac6ce 25%, #cde3e5 30%, #fff);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#79adb9", endColorstr="#f2f2f2", GradientType=0);
+  background: #55bbc5;
+  background: -moz-linear-gradient(top, #55bbc5 0, #55bbc5 28%, #afdde0 41%, #f2f2f2 61%, #fff 79%, #fff 100%);
+  background: -webkit-linear-gradient(top, #55bbc5, #55bbc5 28%, #afdde0 41%, #f2f2f2 61%, #fff 79%, #fff);
+  background: linear-gradient(180deg, #55bbc5 0, #55bbc5 28%, #afdde0 41%, #f2f2f2 61%, #fff 79%, #fff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#55bbc5", endColorstr="#ffffff", GradientType=0);
 }
 
 .values-section ul img {
@@ -931,6 +931,15 @@ h2 span {
 
 .tile-transparent.orange {
   background: hsla(24, 76%, 67%, .5);
+}
+
+.tile__slide {
+  transition: all .5s ease;
+}
+
+.tile__slide,
+.tile__slide.tile__slide--present {
+  transform: translateX(0);
 }
 
 .list-reset {
