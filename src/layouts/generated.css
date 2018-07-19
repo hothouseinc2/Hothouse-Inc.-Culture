@@ -935,10 +935,12 @@ h2 span {
 
 .tile__slide {
   transition: all .5s ease;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
-.tile__slide,
 .tile__slide.tile__slide--present {
+  opacity: 1;
   transform: translateX(0);
 }
 

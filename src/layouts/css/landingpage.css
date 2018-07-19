@@ -103,9 +103,11 @@ h2 {
 
 .tile__slide {
   transition: all 0.5s ease;
-  transform: translateX(0);
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .tile__slide.tile__slide--present {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0%);
 }

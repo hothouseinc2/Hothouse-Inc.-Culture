@@ -13,20 +13,25 @@ export default class Tiles extends Component {
   }
 
   hoverOn = () => {
-    this.setState.hover = true
-    console.log('triggered')
+    this.setState({
+      hover: true
+    })
   }
 
   hoverOff = () => {
-    this.setState.hover = false
-    console.log('triggered')
+    this.setState({
+      hover: false
+    })
   }
 
+  title
+  imgURL
+  description
   render() {
     return (
       // <ul className="flex flex-col md-flex-row md-flex-wrap -mx-4 px-4 lg-px-0">
       <li
-        className="tile w-96 h-96 lg-w-120 lg-h-120 relative list-reset mx-auto px-2 max-w-full md-px-4 mb-8 cursor-pointer"
+        className="tile w-96 h-96 lg-w-120 lg-h-120 relative list-reset mx-auto max-w-full mb-8 cursor-pointer overflow-hidden"
         onMouseEnter={() => this.hoverOn()}
         onMouseLeave={() => this.hoverOff()}
       >
@@ -45,7 +50,12 @@ export default class Tiles extends Component {
             </div>
           </div>
         </div>
-        <div className={"flex justify-content items-center bg-tile-hothouse tile__slide absolute pin-t pin-b pin-r pin-l" + (this.state.hover ? "tile__slide--present" : "")}>
+        <div
+          className={
+            'flex justify-content items-center bg-tile-hothouse tile__slide absolute pin-t pin-b pin-r pin-l ' +
+            (this.state.hover ? 'tile__slide--present' : '')
+          }
+        >
           <p className="text-white text-center text-2xl px-4 leading-normal">
             Leveraging moments that explore undiscovered employee talents and business
             success.{' '}
