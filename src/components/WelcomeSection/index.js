@@ -38,8 +38,7 @@ export default class WelcomeSection extends Component {
             className="block mx-auto mb-4"
           />
         </header>
-        <img src={Caret} alt="" className="block mt-16 mb-32 mx-auto" />
-        <section className="mission-section">
+        <section className="mission-section mt-64">
           <div className="relative">
             <img
               className="mission-section__middle-clouds absolute"
