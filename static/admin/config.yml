@@ -17,10 +17,19 @@ display_url: https://your-site.com
 collections:
   - name: header
     label: Header
-    folder: src/pages/header/item
+    folder: src/pages/header/items
     create: true
     fields:
       - { name: greeting, label: Greeting, default: "HI, WE'RE HOTHOUSE."}
+      - { name: about, label: About Hothouse, default: "We rewrite the equations to our clients’ problems, so we can create different solutions than everyone else. We employ talent that looks for answers in unlikely places. Our people and the culture we’ve made together brings unexpected thinking to all our clients’ challenges."}
+      - { name: video, label}
+      - { name: videoURL, label: Video URL, widget: string, default: "https://www.youtube.com/watch?v=1gI_HGDgG7c" }
+  - name: benefits
+    label: Benefits
+    folder: src/pages/benefits/items
+    create: true
+    fields:
+      - { name: title, label: Title, default: "untapped opportunities."}
       - { name: about, label: About Hothouse, default: "We rewrite the equations to our clients’ problems, so we can create different solutions than everyone else. We employ talent that looks for answers in unlikely places. Our people and the culture we’ve made together brings unexpected thinking to all our clients’ challenges."}
       - { name: video, label}
       - { name: videoURL, label: Video URL, widget: string, default: "https://www.youtube.com/watch?v=1gI_HGDgG7c" }
