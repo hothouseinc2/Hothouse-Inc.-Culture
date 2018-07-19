@@ -1,86 +1,45 @@
 backend:
-  # name: github
-  repo: hothouseinc2/Hothouse-Inc.-Culture
   name: git-gateway
   branch: master
-  accept_roles: #optional - accepts all users if left out
-    - admin
-    - editor
 
-media_folder: static/assets
-public_folder: /assets
-
-publish_mode: editorial_workflow
-
-display_url: https://your-site.com
+media_folder: static/img
+public_folder: /img
 
 collections:
-  - label: "Header"
-    name: "header"
-    folder: "src/pages/header/items"
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { name: "greeting", label: "Greeting",  widget: string, default: "HI, WE'RE HOTHOUSE."}
-      - { name: "about", label: "About Hothouse",  widget: string, default: "We rewrite the equations to our clients’ problems, so we can create different solutions than everyone else. We employ talent that looks for answers in unlikely places. Our people and the culture we’ve made together brings unexpected thinking to all our clients’ challenges."}
-      - { name: "videoURL", label: "Video URL", widget: string, default: "https://www.youtube.com/watch?v=1gI_HGDgG7c" }
-  - label: "Pages"
-    name: "pages"
-    files:
-      - label: "About Page"
-        name: "about"
-        file: "src/pages/content/about.yml"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
-      - label: "Locations Page"
-        name: "locations"
-        file: "src/pages/content/locations.yml"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}
-  # - name: benefits
-  #   label: Benefits
-  #   folder: src/pages/benefits/items
-  #   create: true
-  #   fields:
-  #     - { name: title, label: Title, default: "untapped opportunities."}
-  #     - { name: about, label: About Hothouse, default: "We rewrite the equations to our clients’ problems, so we can create different solutions than everyone else. We employ talent that looks for answers in unlikely places. Our people and the culture we’ve made together brings unexpected thinking to all our clients’ challenges."}
-  #     - { label: "Tile Image", name: "tileImage", widget: "image", default: "/"}
-  #     - { name: videoURL, label: Video URL, widget: string, default: "https://www.youtube.com/watch?v=1gI_HGDgG7c" }
-#   - name: work
-#     label: Work
-#     folder: src/pages/posts/work
-#     create: true
-#     fields:
-#       - { name: layout, label: Layout, default: "work"}
-#       - { name: type, label: Type, default: "work"}
-#       - { name: title, label: Title}
-#       - { name: tldr, label: TL;DR}
-#       - { name: imageNote, label: Image Note, required: false}
-#       - { name: svgName, label: SVG File Name, required: false}
-#       - { name: description, label: Description}
-#       - { name: headerColor, label: Header BG Color, required: false}
-#       - { name: metaBackground, label: Meta BG Color, required: false}
-#       - { name: linkColor, label: Link Color, required: false}
-#       - { name: textColor, label: Text Color, required: false}
-#       - { name: textBackground, label: Post BG Color, required: false}
-#       - { name: website, label: Website, required: false}
-#       - { name: date, label: Created At, widget: date }
-      # - { name: path, label: path, widget: string, default: "/work" }
-#       - { name: body, label: Post, widget: markdown}
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", widget: "list"}
 
-# editor:
-#   preview: false
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/products/index.md"
+        label: "Products Page"
+        name: "products"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
+          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
+          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
+          - {label: Full_image, name: full_image, widget: image}
+          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}

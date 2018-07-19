@@ -85,6 +85,20 @@ module.exports = {
         exclude: ['/preview/**', '/do-not-track/me/too/']
       }
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages'
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/img`,
+        name: 'images'
+      }
+    },
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify` // make sure to put last in the array
