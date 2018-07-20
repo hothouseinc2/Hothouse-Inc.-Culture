@@ -36,4 +36,3 @@ listOfValues:
       icon: /img/icon-values-6.svg
       name: Entrepreneurial
 ---
-

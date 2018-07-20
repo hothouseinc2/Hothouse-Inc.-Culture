@@ -9,6 +9,7 @@ export default class IndexPage extends Component {
         <WelcomeSection
           values={this.props.data.site.siteMetadata.values}
           benefits={this.props.data.site.siteMetadata.benefits}
+          data={this.props.data.allMarkdownRemark}
         />
         <Footer />
       </div>
@@ -30,6 +31,28 @@ export const layoutQuery = graphql`
           icon
           heading
           description
+        }
+      }
+    }
+
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+            greeting
+            cta
+            videoURL
+            listOfValues {
+              values {
+                description
+                icon
+                name
+              }
+            }
+          }
         }
       }
     }

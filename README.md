@@ -1,21 +1,9 @@
 # Hothouse Inc Culture Site
-Made with GatsbyJS
 
-<div align="center">
-  <img src="https://image.ibb.co/cJjPN7/gatsby_tailwind.png" alt="Gatsby and Tailwind CSS logos">
-</div>
- 
-<div align="center">
-  <strong>A <a href="https://www.gatsbyjs.org/">Gatsby</a> starter styled using <a href="https://tailwindcss.com/">Tailwind</a>, a utility-first CSS framework.</strong><br />
-  Uses <a href="https://www.purgecss.com/">Purgecss</a> to remove unused CSS.<br />
-  Illustrations by <a href="https://undraw.co/">unDraw</a>.
-  <br />
-  <br />
-</div>
-  
-![alt text](https://image.ibb.co/jv6FC7/gatsby_starter_tailwind.png "Screenshot of Gatsby Starter Tailwind homepage")
-  
-<p align="center">View demo <a href="https://quizzical-mcclintock-0226ac.netlify.com/">here</a>.</p>
+Made with [GatsbyJS](https://www.gatsbyjs.org/) + [Netlify](https://www.netlify.com/) + [NetlifyCMS](https://www.netlifycms.org/)
+
+This project uses the following starter:
+[Gatsby + Tailwind Starter](https://github.com/taylorbryant/gatsby-starter-tailwind)
 
 ## Getting started
 
@@ -25,22 +13,52 @@ Install Gatsby CLI:
 npm install --global gatsby-cli
 ```
 
-Create new Gatsby project using this starter:
+Install NVM:
+Follow this [link](https://github.com/creationix/nvm) to install it. NVM is important for any Node project. Check out [AVN](https://github.com/wbyoung/avn) as well to have your local setup switch automatically to the correct version whenever there is a `.nvmrc` file with the project's node version.
+
+Once you're in the project directory:
 
 ```sh
-gatsby new my-new-website https://github.com/taylorbryant/gatsby-starter-tailwind
+npm install
 ```
 
-Build stylesheet from Tailwind config and run project locally:
+The following two commands are important. The above GatsbyJS CLI ships with a custom `gatsby develop / gatsby build` command. Since we are processing TailwindCSS, we have a custom start/build script below. Take a look at the `package.json` and the `build` + `develop` commands.
+
+Starting the Project (locally):
 
 ```sh
-cd my-new-website
 npm run develop
+```
+
+Building the Project:
+
+```sh
+npm run build
 ```
 
 ## Deploy
 
+_ANY_ and _EVERY_ push to the `master` branch is live. Any edit in the CMS also pushes changes (in the form of markdown files) to the `master` branch.
+
+Whenever you work on the project, make sure you have pulled the latest `master` even if you haven't edited the site. Any change from the CMS needs to be pulled down as well. This is a static-site. Everything is connected to a file.
+
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/taylorbryant/gatsby-starter-tailwind)
+
+## GraphQL
+
+## Netlify
+
+## Netlify CMS
+
+## Netlify CMS Users
+
+_note on git gateway being enabled in your Netlify settings_
+
+1.  Sign up on the site `/admin`
+2.  Approve User in Netlify Identity tab
+3.  User should be able to Login
+
+- Current issue is that when a user logs into the site, it does not redirect, but displays a "You're logged in" state. Just refresh the page and you're in.
 
 ## Resources
 

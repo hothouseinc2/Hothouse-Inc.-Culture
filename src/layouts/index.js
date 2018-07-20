@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import Nav from '../components/Nav'
 
 import './generated.css'
 
@@ -50,6 +51,7 @@ const TemplateWrapper = ({ children }) => (
     >
       <html lang="en" />
     </Helmet>
+    <Nav />
     <div className="site-inner">{children()}</div>
   </div>
 )

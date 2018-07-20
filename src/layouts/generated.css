@@ -860,6 +860,15 @@ ul {
   padding-left: 0;
 }
 
+.screenreader-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .culture-nav {
   background: rgba(65, 89, 116, .5);
 }
@@ -942,6 +951,13 @@ h2 span {
 .tile__slide.tile__slide--present {
   opacity: 1;
   transform: translateX(0);
+}
+
+@media screen and (min-width:768px) {
+  .culture-nav {
+    top: 50%;
+    transform: rotate(90deg) translateY(-50%);
+  }
 }
 
 .list-reset {
