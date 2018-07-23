@@ -5,7 +5,7 @@ import Facebook from '../../images/footer/icon-facebook.svg'
 import Twitter from '../../images/footer/icon-twitter.svg'
 import Instagram from '../../images/footer/icon-instagram.svg'
 import Spotify from '../../images/footer/icon-spotify.svg'
-import LinkedIn from '../../images/footer/icon-linkedIn.svg'
+import LinkedIn from '../../images/footer/icon-linkedin.svg'
 import SVG from 'react-inlinesvg'
 
 export default class Footer extends Component {
