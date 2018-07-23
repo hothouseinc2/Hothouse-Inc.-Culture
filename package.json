@@ -17,6 +17,7 @@
     "netlify-cms": "1.7.0",
     "nuka-carousel": "^4.3.5",
     "react-helmet": "^5.2.0",
+    "react-inlinesvg": "^0.8.1",
     "smoothscroll-polyfill": "^0.4.3",
     "uuid": "^3.2.1"
   },

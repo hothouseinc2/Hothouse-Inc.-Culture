@@ -112,9 +112,17 @@ h2 {
   transform: translateX(0%);
 }
 
+.benefits-section__link {
+  background: rgba(65, 89, 116, 0.7);
+  transition: all 0.5s ease;
+}
+
+
 @media screen and (min-width: 768px) {
   .culture-nav {
     top: 50%;
     transform: rotate(90deg) translateY(-50%);
   }
 }
+
+

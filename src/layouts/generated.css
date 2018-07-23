@@ -953,6 +953,11 @@ h2 span {
   transform: translateX(0);
 }
 
+.benefits-section__link {
+  background: rgba(65, 89, 116, .7);
+  transition: all .5s ease;
+}
+
 @media screen and (min-width:768px) {
   .culture-nav {
     top: 50%;
@@ -2673,6 +2678,10 @@ h2 span {
 
 .h-128 {
   height: 32rem;
+}
+
+.h-156 {
+  height: 54rem;
 }
 
 .h-auto {
@@ -6743,6 +6752,10 @@ h2 span {
     height: 32rem;
   }
 
+  .sm\-h-156 {
+    height: 54rem;
+  }
+
   .sm\-h-auto {
     height: auto;
   }
@@ -10794,6 +10807,10 @@ h2 span {
 
   .md\-h-128 {
     height: 32rem;
+  }
+
+  .md\-h-156 {
+    height: 54rem;
   }
 
   .md\-h-auto {
@@ -14849,6 +14866,10 @@ h2 span {
     height: 32rem;
   }
 
+  .lg\-h-156 {
+    height: 54rem;
+  }
+
   .lg\-h-auto {
     height: auto;
   }
@@ -18900,6 +18921,10 @@ h2 span {
 
   .xl\-h-128 {
     height: 32rem;
+  }
+
+  .xl\-h-156 {
+    height: 54rem;
   }
 
   .xl\-h-auto {
