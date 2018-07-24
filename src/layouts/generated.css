@@ -958,6 +958,50 @@ h2 span {
   transition: all .5s ease;
 }
 
+.unfiltered-section ul {
+  display: flex;
+}
+
+.unfiltered-section .big,
+.unfiltered-section .small {
+  height: 300px;
+  width: 300px;
+}
+
+@supports (display:grid) {
+  .unfiltered-section ul {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-auto-flow: dense;
+  }
+
+  .unfiltered-section .big {
+    height: unset;
+    width: unset;
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  .unfiltered-section .big div {
+    height: 100%;
+    width: 100%;
+  }
+
+  .unfiltered-section .small {
+    height: unset;
+    width: unset;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  .unfiltered-section .small div {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width:768px) {
   .culture-nav {
     top: 50%;

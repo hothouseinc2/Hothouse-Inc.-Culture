@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import Logo from '../../images/hothouse-logo.svg'
 import Caret from '../../images/caret.svg'
-import Illustration from '../../images/mission/bottom-illustration.svg'
+import MtnIllustration from '../../images/mission/bottom-illustration.svg'
+import SmallCityIllustration from '../../images/location/illustration-city.png'
 import MiddleClouds from '../../images/mission/middle-clouds.svg'
 import Tiles from '../Tiles'
 import IconArrow from '../../images/apply/IconArrow'
+import Carousel from 'nuka-carousel'
+import BgBeltline from '../../images/location/bg-beltline.svg'
 
 export default class WelcomeSection extends Component {
   render() {
@@ -79,11 +82,11 @@ export default class WelcomeSection extends Component {
           </div>
           <img
             className="max-w-3xl px-4 block mx-auto mb-8 w-full"
-            src={Illustration}
+            src={MtnIllustration}
             alt=""
           />
         </section>
-        <section className="values-section max-w-2xl px-4 md-pd-0 mx-auto pb-16">
+        <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
           <h2 className="uppercase text-black text-center text-4-5xl mb-32">
             {valuesSection.title}
           </h2>
@@ -104,6 +107,136 @@ export default class WelcomeSection extends Component {
               {benefits}{' '}
             </ul>
           </div>
+          <img src={Caret} alt="" className="block mx-auto" />
+        </section>
+        <section className="location-section h-screen">
+          <Carousel dragging={true}>
+            <div className="bg-blue h-screen text-white text-center py-32">
+              <div className="max-w-md mx-auto">
+                <img src={SmallCityIllustration} alt="" className="mb-8" />
+                <h2 className="uppercase text-3xl md-text-4-5xl mb-4 max-w-md mx-auto">
+                  We're located on the{' '}
+                  <span className="block">corner of chill vibes and</span> the go-getter
+                  hustle.
+                </h2>
+                <p className="text-black-lighter text-2xl max-w-sm mx-auto">
+                  Our neighborhood helps make us unique. Explore what we love about it.{' '}
+                </p>
+              </div>
+            </div>
+            <div>
+             <div style={{backgroundImage: 'url(' + BgBeltline + ')'}}>
+              <img src="http://via.placeholder.com/307x438" alt="" />
+              <blockquote>
+                Be less curious about people and more curious about ideas.
+              </blockquote>
+            </div>
+            </div>
+            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
+            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
+            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
+            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" />
+          </Carousel>
+        </section>
+        <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
+          <h2 className="uppercase font-bold text-black text-2xl md-text-4-5xl mb-2 mt-8 text-center">
+            Hothouse Unfiltered
+          </h2>
+          <p className="text-black-lighter text-center text-2xl mb-20">
+            Take a peek into the way we work—and play.
+          </p>
+          <ul className="list-reset max-w-xl mx-auto">
+            <li className="big">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/big1.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="small">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small1.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="small">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small2.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="small">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small3.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="big">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/big2.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="small">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small4.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="big">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/big3.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="small">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small5.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+            <li className="small">
+              <div
+                style={{
+                  backgroundImage:
+                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small6.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
+            </li>
+          </ul>
         </section>
         <section className="benefits-section bg-hothouse py-32">
           <div className="max-w-2xl mx-auto w-full md-flex px-4 md-px-0">
