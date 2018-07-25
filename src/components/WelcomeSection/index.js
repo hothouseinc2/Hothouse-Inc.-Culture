@@ -16,11 +16,11 @@ export default class WelcomeSection extends Component {
     let { edges } = this.props.data
     let header = edges.filter(i => i.node.frontmatter.id === 'header')[0].node.frontmatter
     let uniqueEnvironment = edges.filter(i => i.node.frontmatter.id === 'benefits')[0]
-      .node.frontmatter
+      .node.frontmatter.howWeStandOut.points
     let valuesSection = edges.filter(i => i.node.frontmatter.id === 'values')[0].node
       .frontmatter
 
-    console.log(valuesSection)
+    console.log(uniqueEnvironment)
     let values = valuesSection.listOfValues.values.map((i, index) => (
       <li className="w-full md-w-1-2 lg-w-1-3 mb-32" key={index}>
         <div>
@@ -39,11 +39,11 @@ export default class WelcomeSection extends Component {
       </li>
     ))
 
-    let benefits = this.props.benefits.map((i, index) => (
+    let benefits = uniqueEnvironment.map((i, index) => (
       <Tiles
         key={index}
         title={i.title}
-        imageURL={i.imageURL}
+        imageURL={i.image}
         description={i.description}
         color={i.color}
       />
