@@ -10,6 +10,8 @@ import Carousel from 'nuka-carousel'
 import BgBeltline from '../../images/location/bg-beltline.svg'
 import BgO4w from '../../images/location/text-old-fourth-ward.png'
 import LocationBackground from '../../images/location/location-background-test.jpg'
+import Quotation from '../../images/location/icon-quotation-marks.svg'
+import SarahTest from '../../images/location/headshot-sarah.jpg'
 
 export default class WelcomeSection extends Component {
   render() {
@@ -19,8 +21,6 @@ export default class WelcomeSection extends Component {
       .node.frontmatter.howWeStandOut.points
     let valuesSection = edges.filter(i => i.node.frontmatter.id === 'values')[0].node
       .frontmatter
-
-    console.log(uniqueEnvironment)
     let values = valuesSection.listOfValues.values.map((i, index) => (
       <li className="w-full md-w-1-2 lg-w-1-3 mb-32" key={index}>
         <div>
@@ -53,78 +53,82 @@ export default class WelcomeSection extends Component {
       __html: `<iframe class="mx-auto max-w-full block" src="https://player.vimeo.com/video/180169500" width="995" height="560" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`
     }
     return (
-      <div className="welcome-section bg-welcome-gradient pt-32">
-        <header>
-          <img src={Logo} alt="" className="block mx-auto mb-12" />
-          <h1 className="uppercase text-white text-2xl md-text-4-5xl text-center">
-            {header.greeting}
-          </h1>
-          <p className="font-sans text-white px-4 md-px-0 text-lg md-text-2xl mb-12 leading-normal text-center max-w-md mx-auto">
-            {header.description}
-          </p>
-          <p className="mb-8 font-sans text-white tracking-normal text-xl mb-12 leading-normal text-center max-w-md mx-auto font-bold">
-            {header.cta}
-          </p>
-          <div className="" dangerouslySetInnerHTML={video} />;
-        </header>
-        <section className="mission-section mt-64">
-          <div className="relative">
+      <div className="welcome-section">
+        <div className="bg-welcome-gradient pt-32">
+          <header>
+            <img src={Logo} alt="" className="block mx-auto mb-12" />
+            <h1 className="uppercase text-white text-2xl md-text-4-5xl text-center">
+              {header.greeting}
+            </h1>
+            <p className="font-sans text-white px-4 md-px-0 text-lg md-text-2xl mb-12 leading-normal text-center max-w-md mx-auto">
+              {header.description}
+            </p>
+            <p className="mb-8 font-sans text-white tracking-normal text-xl mb-12 leading-normal text-center max-w-md mx-auto font-bold">
+              {header.cta}
+            </p>
+            <div dangerouslySetInnerHTML={video} />;
+          </header>
+          <section className="mission-section mt-64">
+            <div className="relative">
+              <img
+                className="mission-section__middle-clouds absolute"
+                src={MiddleClouds}
+                alt=""
+              />
+              <h2 className="text-center uppercase mb-32 text-tile-blue max-w-xs mx-auto">
+                <span className="block text-xl mission__accents text-hothouse">
+                  Our Mission
+                </span>
+                <div className="text-2xl md-text-4-5xl font-normal">
+                  <span className="block">The Unknown</span>
+                  <span className="block font-bold">Equals</span>
+                  <span className="block">Opportunity</span>
+                </div>
+              </h2>
+            </div>
             <img
-              className="mission-section__middle-clouds absolute"
-              src={MiddleClouds}
+              className="max-w-3xl px-4 block mx-auto pb-8 w-full"
+              src={MtnIllustration}
               alt=""
             />
-            <h2 className="text-center uppercase mb-32 text-tile-blue max-w-xs mx-auto">
-              <span className="block text-xl mission__accents text-hothouse">
-                Our Mission
-              </span>
-              <div className="text-2xl md-text-4-5xl font-normal">
-                <span className="block">The Unknown</span>
-                <span className="block font-bold">Equals</span>
-                <span className="block">Opportunity</span>
-              </div>
+          </section>
+        </div>
+        <div className="bg-values-gradient">
+          <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
+            <h2 className="uppercase text-black text-center text-4-5xl mb-32">
+              {valuesSection.title}
             </h2>
-          </div>
-          <img
-            className="max-w-3xl px-4 block mx-auto mb-8 w-full"
-            src={MtnIllustration}
-            alt=""
-          />
-        </section>
-        <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
-          <h2 className="uppercase text-black text-center text-4-5xl mb-32">
-            {valuesSection.title}
-          </h2>
-          <ul className="flex flex-col md-flex-row flex-wrap list-reset text-center">
-            {values}
-          </ul>
-          <img src={Caret} alt="" className="block my-16 mx-auto" />
-        </section>
-        <section className="benefits-section bg-grey pt-32">
-          <h2 className="text-black uppercase text-4-5xl text-center max-w-md mx-auto mb-4">
-            {uniqueEnvironment.title}
-          </h2>
-          <h3 className="text-grey text-lg md-text-2xl font-semibold text-grey-darker text-center mb-20 px-4">
-            {uniqueEnvironment.description}
-          </h3>
-          <div className="mx-auto max-w-xl px-4 md-px-0">
-            <ul className="flex flex-col md-flex-row md-flex-wrap -mx-4 px-4 lg-px-0 lg-px-0">
-              {benefits}{' '}
+            <ul className="flex flex-col md-flex-row flex-wrap list-reset text-center">
+              {values}
             </ul>
-          </div>
-          <img src={Caret} alt="" className="block mx-auto" />
-        </section>
+            <img src={Caret} alt="" className="block my-16 mx-auto" />
+          </section>
+          <section className="benefits-section bg-grey pt-32 pb-16">
+            <h2 className="text-black uppercase text-4-5xl text-center max-w-md mx-auto mb-4">
+              {uniqueEnvironment.title}
+            </h2>
+            <h3 className="text-grey text-lg md-text-2xl font-semibold text-grey-darker text-center mb-20 px-4">
+              {uniqueEnvironment.description}
+            </h3>
+            <div className="mx-auto max-w-xl px-4 md-px-0">
+              <ul className="flex flex-col md-flex-row md-flex-wrap -mx-4 px-4 lg-px-0 lg-px-0 mb-24">
+                {benefits}{' '}
+              </ul>
+            </div>
+            <img src={Caret} alt="" className="block mx-auto" />
+          </section>
+        </div>
         <section className="location-section h-screen">
           <Carousel dragging={true}>
             <div className="bg-blue h-screen text-white text-center py-32">
-              <div className="max-w-md mx-auto">
-                <img src={SmallCityIllustration} alt="" className="mb-8" />
-                <h2 className="uppercase text-3xl md-text-4-5xl mb-4 max-w-md mx-auto">
+              <div className="max-w-md mx-auto px-4 md-pd-0">
+                <img src={SmallCityIllustration} alt="" className="mb-16 md-mb-8" />
+                <h2 className="uppercase text-2xl md-text-4-5xl mb-4 max-w-md mx-auto">
                   We're located on the{' '}
                   <span className="block">corner of chill vibes and</span> the go-getter
                   hustle.
                 </h2>
-                <p className="text-black-lighter text-2xl max-w-sm mx-auto">
+                <p className="text-black-lighter text-lg md-text-2xl max-w-sm mx-auto">
                   Our neighborhood helps make us unique. Explore what we love about it.{' '}
                 </p>
               </div>
@@ -138,24 +142,30 @@ export default class WelcomeSection extends Component {
                 backgroundPosition: 'center'
               }}
             >
-              <div className="max-w-md flex">
-                <div className="bg-location p-4 shadow">
-                  <img src="http://via.placeholder.com/307x438" alt="" />
+              <div className="max-w-lg flex flex-col md-flex-row w-full">
+                <div className="bg-location p-4 shadow w-full md-w-2-5 flex items-center justify-center">
+                  <img src={SarahTest} alt="" />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col h-120 w-full md-w-3-5">
                   <div className="bg-location flex-1 p-4">
-                    <blockquote>
-                      Be less curious about people and more curious about ideas.
+                    <blockquote className="text-xl md-text-2xl text-black mx-auto md-mx-0 max-w-sm mt-8 pb-4">
+                      With Hothouse being in one of Atlanta’s hottest in-town
+                      neighborhoods, it makes it super easy to get to work. My husband
+                      (and fellow designer) bikes or runs here every day.
                     </blockquote>
+                    <hr className="border-b border-black-light mb-2 mx-0 max-w-xs " />
+                    <cite className="text-xl font-thin max-w-xs roman block">
+                      Sarah O'Bryan | Creative Director
+                    </cite>
                   </div>
                   <div
-                  className="self-end"
+                    className="self-end"
                     style={{
                       backgroundImage: 'url(' + BgO4w + ')',
                       backgroundRepeat: 'no-repeat',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
-                      height: '92px',
+                      height: '135px',
                       width: '100%'
                     }}
                   />
@@ -268,7 +278,7 @@ export default class WelcomeSection extends Component {
             </li>
           </ul>
         </section>
-        <section className="benefits-section bg-hothouse py-16 md-py-32">
+        <section className="referal-section bg-hothouse py-16 md-py-32">
           <div className="max-w-2xl mx-auto w-full md-flex px-4 md-px-0">
             <div className="md-w-3-4 text-center">
               <h2 className="uppercase font-bold text-white text-2xl md-text-4-5xl mb-2 mt-8">
@@ -283,7 +293,7 @@ export default class WelcomeSection extends Component {
               <a
                 href="http://hothouseinc.com/people/#become-one-of-us"
                 target="_blank"
-                className="benefits-section__link block w-24 h-24 rounded-full flex justify-center items-center hover-bg-blue"
+                className="referal-section__link block w-24 h-24 rounded-full flex justify-center items-center hover-bg-blue"
               >
                 <IconArrow />
               </a>
