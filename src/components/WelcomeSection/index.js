@@ -7,18 +7,19 @@ import MiddleClouds from '../../images/mission/middle-clouds.svg'
 import Tiles from '../Tiles'
 import IconArrow from '../../images/apply/IconArrow'
 import Carousel from 'nuka-carousel'
-import BgBeltline from '../../images/location/bg-beltline.svg'
-import BgO4w from '../../images/location/text-old-fourth-ward.png'
-import LocationBackground from '../../images/location/location-background-test.jpg'
-import Quotation from '../../images/location/icon-quotation-marks.svg'
-import SarahTest from '../../images/location/headshot-sarah.jpg'
+// import BgBeltline from '../../images/location/bg-beltline.svg'
+// import BgO4w from '../../images/location/text-old-fourth-ward.png'
+// import LocationBackground from '../../images/location/location-background-test.jpg'
+// import Quotation from '../../images/location/icon-quotation-marks.svg'
 
 export default class WelcomeSection extends Component {
   render() {
     let { edges } = this.props.data
     let header = edges.filter(i => i.node.frontmatter.id === 'header')[0].node.frontmatter
     let uniqueEnvironment = edges.filter(i => i.node.frontmatter.id === 'benefits')[0]
-      .node.frontmatter.howWeStandOut.points
+      .node.frontmatter
+    let uniqueEnvironmentItems = uniqueEnvironment.howWeStandOut.points
+
     let valuesSection = edges.filter(i => i.node.frontmatter.id === 'values')[0].node
       .frontmatter
     let values = valuesSection.listOfValues.values.map((i, index) => (
@@ -39,7 +40,48 @@ export default class WelcomeSection extends Component {
       </li>
     ))
 
-    let benefits = uniqueEnvironment.map((i, index) => (
+    let location = this.props.location.map((i, index) => (
+      <div
+        className="h-screen flex justify-center items-center"
+        style={{
+          backgroundImage: 'url(' + i.locationImage + ')',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        <div className="max-w-lg flex flex-col md-flex-row w-full">
+          <div className="bg-location p-4 shadow w-full md-w-2-5 flex items-center justify-center">
+            <img src={i.image} alt="" />
+          </div>
+          <div className="flex flex-col h-120 w-full md-w-3-5">
+            <div className="bg-location flex-1 p-4">
+              <blockquote className="text-xl md-text-2xl text-black mx-auto md-mx-0 max-w-sm mt-8 pb-4">
+                {i.quotation}
+              </blockquote>
+              <hr className="border-b border-black-light mb-2 mx-0 max-w-xs " />
+              <cite className="text-xl font-thin max-w-xs roman block">
+                {i.fullName} | {i.jobTitle}
+              </cite>
+            </div>
+            <div
+              className="self-end"
+              style={{
+                backgroundImage: 'url(' + i.locationImageText + ')',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                height: '135px',
+                width: '100%'
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    ))
+
+    console.log(uniqueEnvironment)
+    let benefits = uniqueEnvironmentItems.map((i, index) => (
       <Tiles
         key={index}
         title={i.title}
@@ -104,7 +146,7 @@ export default class WelcomeSection extends Component {
             <img src={Caret} alt="" className="block my-16 mx-auto" />
           </section>
           <section className="benefits-section bg-grey pt-32 pb-16">
-            <h2 className="text-black uppercase text-4-5xl text-center max-w-md mx-auto mb-4">
+            <h2 className="text-black uppercase text-2xl md-text-4-5xl text-center max-w-md mx-auto mb-4">
               {uniqueEnvironment.title}
             </h2>
             <h3 className="text-grey text-lg md-text-2xl font-semibold text-grey-darker text-center mb-20 px-4">
@@ -133,56 +175,15 @@ export default class WelcomeSection extends Component {
                 </p>
               </div>
             </div>
-            <div
-              className="h-screen flex justify-center items-center"
-              style={{
-                backgroundImage: 'url(' + LocationBackground + ')',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              <div className="max-w-lg flex flex-col md-flex-row w-full">
-                <div className="bg-location p-4 shadow w-full md-w-2-5 flex items-center justify-center">
-                  <img src={SarahTest} alt="" />
-                </div>
-                <div className="flex flex-col h-120 w-full md-w-3-5">
-                  <div className="bg-location flex-1 p-4">
-                    <blockquote className="text-xl md-text-2xl text-black mx-auto md-mx-0 max-w-sm mt-8 pb-4">
-                      With Hothouse being in one of Atlanta’s hottest in-town
-                      neighborhoods, it makes it super easy to get to work. My husband
-                      (and fellow designer) bikes or runs here every day.
-                    </blockquote>
-                    <hr className="border-b border-black-light mb-2 mx-0 max-w-xs " />
-                    <cite className="text-xl font-thin max-w-xs roman block">
-                      Sarah O'Bryan | Creative Director
-                    </cite>
-                  </div>
-                  <div
-                    className="self-end"
-                    style={{
-                      backgroundImage: 'url(' + BgO4w + ')',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      height: '135px',
-                      width: '100%'
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide3" />
-            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide4" />
-            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide5" />
-            <img src="http://placehold.it/1000x400/ffffff/c0392b/&text=slide6" />
+
+            {location}
           </Carousel>
         </section>
         <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
           <h2 className="uppercase font-bold text-black text-2xl md-text-4-5xl mb-2 mt-8 text-center">
             Hothouse Unfiltered
           </h2>
-          <p className="text-black-lighter text-center text-2xl mb-20">
+          <p className="text-black-lighter text-center text-xl md-text-2xl mb-20">
             Take a peek into the way we work—and play.
           </p>
           <ul className="list-reset max-w-xl mx-auto">

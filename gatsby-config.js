@@ -68,8 +68,47 @@ module.exports = {
         description:
           "Our competitive approach allows us to seek out innovation—even when it's risky—so we can reap the greatest rewards."
       }
+    ],
+    location: [
+      {
+        fullName: "Sarah O'Bryan",
+        jobTitle: 'Creative Director',
+        quotation:
+          'With Hothouse being in one of Atlanta’s hottest in-town neighborhoods, it makes it super easy to get to work. My husband (and fellow designer) bikes or runs here every day.',
+        image: '/images/headshot-sarah.jpg',
+        locationImageText: '/images/text-old-fourth-ward.png',
+        locationImage: '/images/location-background-test.jpg'
+      },
+      {
+        fullName: 'John Smith',
+        jobTitle: 'Developer',
+        quotation:
+          'Inman Park has a small neighborhood vibe while still being in an urban setting. There’s so many quaint shops and restaurants, and you can’t beat stopping at Krog Street Market.',
+        image: '/images/location-headshot-random-guy.jpg',
+        locationImageText: '/images/text-old-fourth-ward.png',
+        locationImage: '/images/location-bg-inman.jpg'
+      },
+      {
+        fullName: 'Nakia Henderson',
+        jobTitle: 'Administrative Coordinator',
+        quotation:
+          'I love working near the Atlanta Beltline because it reminds me of home in New York. There’s walkability, art, culture, and it’s a great way to take a moment throughout the day by just going across the street.',
+        image: '/images/location-headshot-nakia.jpg',
+        locationImageText: '/images/text-old-fourth-ward.png',
+        locationImage: '/images/location-bg-beltline.jpg'
+      },
+      {
+        fullName: 'Barbara Tushbant',
+        jobTitle: 'Copywriter',
+        quotation:
+          'I eat lunch at Ponce City Market entirely too much. It’s a perfect storm of “I need to get away from my desk” and “I don’t know what I want to eat for lunch” because it’s across the street and has something for whatever mood I’m in.',
+        image: '/images/location-headshot-barbara.jpg',
+        locationImageText: '/images/text-old-fourth-ward.png',
+        locationImage: '/images/location-bg-pcm.jpg'
+      }
     ]
   },
+
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,

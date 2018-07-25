@@ -9,6 +9,7 @@ export default class IndexPage extends Component {
         <WelcomeSection
           values={this.props.data.site.siteMetadata.values}
           benefits={this.props.data.site.siteMetadata.benefits}
+          location={this.props.data.site.siteMetadata.location}
           data={this.props.data.allMarkdownRemark}
         />
         <Footer />
@@ -32,6 +33,14 @@ export const layoutQuery = graphql`
           heading
           description
         }
+        location {
+          fullName
+          jobTitle
+          quotation
+          image
+          locationImageText
+          locationImage
+        }
       }
     }
 
@@ -47,10 +56,11 @@ export const layoutQuery = graphql`
             cta
             videoURL
             howWeStandOut {
-              points{color
-              title
-              description
-              image
+              points {
+                color
+                title
+                description
+                image
               }
             }
             listOfValues {

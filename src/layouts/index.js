@@ -6,7 +6,7 @@ import Nav from '../components/Nav'
 import './generated.css'
 
 const TemplateWrapper = ({ children }) => (
-  <div className="flex flex-col font-sans min-h-screen text-grey-darkest">
+  <div className="flex flex-col font-sans min-h-screen text-grey-darkest overflow-x-hidden">
     <Helmet
       title="Hothouse Inc. | Culture"
       meta={[
@@ -17,8 +17,7 @@ const TemplateWrapper = ({ children }) => (
         },
         {
           name: 'viewport',
-          content:
-            'width=device-width, initial-scale=1'
+          content: 'width=device-width, initial-scale=1'
         },
         { itemprop: 'name', content: 'Hothouse Inc. Culture Site' },
         {
