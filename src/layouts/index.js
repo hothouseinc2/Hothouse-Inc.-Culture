@@ -15,6 +15,11 @@ const TemplateWrapper = ({ children }) => (
           content:
             'Hothouse is an agency driven by innovation, accountability and a deep desire to understand your brand, your customers and your competitors.'
         },
+        {
+          name: 'viewport',
+          content:
+            'width=device-width, initial-scale=1'
+        },
         { itemprop: 'name', content: 'Hothouse Inc. Culture Site' },
         {
           itemprop: 'description',

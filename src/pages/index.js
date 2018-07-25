@@ -40,11 +40,19 @@ export const layoutQuery = graphql`
         node {
           id
           frontmatter {
+            id
             title
             description
             greeting
             cta
             videoURL
+            howWeStandOut {
+              points{color
+              title
+              description
+              image
+              }
+            }
             listOfValues {
               values {
                 description

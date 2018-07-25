@@ -11,6 +11,7 @@ collections:
     folder: "src/sections/header"
     create: true
     fields:
+      - {label: "id", name: "id", widget: "hidden", default: "header"}
       - {label: "Greeting", name: "greeting", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Call to action", name: "cta", widget: "string"}
@@ -21,6 +22,7 @@ collections:
     folder: "src/sections/values"
     create: true
     fields:
+      - {label: "id", name: "id", widget: "hidden", default: "values"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: 'List of Values', name: listOfValues, widget: object, fields: [{label: Values, name: values, widget: list, fields: [{label: Name, name: name, widget: string}, {label: Description, name: description, widget: text}, {label: Icon, name: icon, widget: image}]}]}
 
@@ -29,6 +31,7 @@ collections:
     folder: "src/sections/benefits"
     create: true
     fields:
+      - {label: "id", name: "id", widget: "hidden", default: "benefits"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: 'How we stand out.', name: howWeStandOut, widget: object, fields: [{label: Points, name: points, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}, {label: Color (in RGBA format), name: color, widget: string}]}]}
