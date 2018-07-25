@@ -1,4 +1,5 @@
 ---
+id: values
 title: The Values that Align Us.
 listOfValues:
   values:

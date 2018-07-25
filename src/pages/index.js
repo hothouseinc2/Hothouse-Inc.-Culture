@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 
 export default class IndexPage extends Component {
   render() {
+    console.log(this.props.data.allMarkdownRemark.edges)
     return (
       <div>
         <WelcomeSection
@@ -40,6 +41,7 @@ export const layoutQuery = graphql`
         node {
           id
           frontmatter {
+            id
             title
             description
             greeting
