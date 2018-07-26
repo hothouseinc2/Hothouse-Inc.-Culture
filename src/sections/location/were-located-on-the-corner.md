@@ -23,7 +23,7 @@ locations:
         reminds me of my home in New York. There’s walkability, art, culture,
         and taking a walk is a great way to clear my head during the workday.
     - headshot: /images/headshot-ellie-harding.jpg
-      jobTitle: Account Services Intern
+      jobTitle: Account Service Intern
       locationImage: /images/location-bg-inman.jpg
       locationNameImage: /images/text-old-fourth-ward.png
       name: Ellie Harding
