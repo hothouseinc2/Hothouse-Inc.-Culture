@@ -4,12 +4,21 @@ import Footer from '../components/Footer'
 
 export default class IndexPage extends Component {
   render() {
+    let { edges } = this.props.data.allMarkdownRemark
     return (
       <div>
         <WelcomeSection
-          values={this.props.data.site.siteMetadata.values}
-          benefits={this.props.data.site.siteMetadata.benefits}
-          location={this.props.data.site.siteMetadata.location}
+          values={
+            edges.filter(i => i.node.frontmatter.id === 'values')[0].node.frontmatter
+              .values
+          }
+          benefits={
+            edges.filter(i => i.node.frontmatter.id === 'benefits')[0].node.frontmatter
+              .benefits
+          }
+          location={
+            edges.filter(i => i.node.frontmatter.id === 'locations')[0].node.frontmatter
+          }
           data={this.props.data.allMarkdownRemark}
         />
         <Footer />
@@ -61,6 +70,19 @@ export const layoutQuery = graphql`
                 title
                 description
                 image
+              }
+            }
+            headline
+            subheading
+
+            locations {
+              listOflocations {
+                headshot
+                jobTitle
+                locationImage
+                locationNameImage
+                name
+                quotation
               }
             }
             listOfValues {

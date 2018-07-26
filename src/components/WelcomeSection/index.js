@@ -7,10 +7,6 @@ import MiddleClouds from '../../images/mission/middle-clouds.svg'
 import Tiles from '../Tiles'
 import IconArrow from '../../images/apply/IconArrow'
 import Carousel from 'nuka-carousel'
-// import BgBeltline from '../../images/location/bg-beltline.svg'
-// import BgO4w from '../../images/location/text-old-fourth-ward.png'
-// import LocationBackground from '../../images/location/location-background-test.jpg'
-// import Quotation from '../../images/location/icon-quotation-marks.svg'
 
 export default class WelcomeSection extends Component {
   render() {
@@ -40,9 +36,11 @@ export default class WelcomeSection extends Component {
       </li>
     ))
 
-    let location = this.props.location.map((i, index) => (
+    let { location } = this.props
+    let locations = location.locations.listOflocations.map((i, index) => (
       <div
         className="h-screen flex justify-center items-center"
+        key={index}
         style={{
           backgroundImage: 'url(' + i.locationImage + ')',
           backgroundRepeat: 'no-repeat',
@@ -52,7 +50,7 @@ export default class WelcomeSection extends Component {
       >
         <div className="max-w-lg flex flex-col md-flex-row w-full">
           <div className="bg-location p-4 shadow w-full md-w-2-5 flex items-center justify-center">
-            <img src={i.image} alt="" />
+            <img src={i.headshot} alt="" />
           </div>
           <div className="flex flex-col h-120 w-full md-w-3-5">
             <div className="bg-location flex-1 p-4">
@@ -61,13 +59,13 @@ export default class WelcomeSection extends Component {
               </blockquote>
               <hr className="border-b border-black-light mb-2 mx-0 max-w-xs " />
               <cite className="text-xl font-thin max-w-xs roman block">
-                {i.fullName} | {i.jobTitle}
+                {i.name} | {i.jobTitle}
               </cite>
             </div>
             <div
               className="self-end"
               style={{
-                backgroundImage: 'url(' + i.locationImageText + ')',
+                backgroundImage: 'url(' + i.locationNameImage + ')',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
@@ -80,7 +78,6 @@ export default class WelcomeSection extends Component {
       </div>
     ))
 
-    console.log(uniqueEnvironment)
     let benefits = uniqueEnvironmentItems.map((i, index) => (
       <Tiles
         key={index}
@@ -166,17 +163,15 @@ export default class WelcomeSection extends Component {
               <div className="max-w-md mx-auto px-4 md-pd-0">
                 <img src={SmallCityIllustration} alt="" className="mb-16 md-mb-8" />
                 <h2 className="uppercase text-2xl md-text-4-5xl mb-4 max-w-md mx-auto">
-                  We're located on the{' '}
-                  <span className="block">corner of chill vibes and</span> the go-getter
-                  hustle.
+                  {location.headline}
                 </h2>
                 <p className="text-black-lighter text-lg md-text-2xl max-w-sm mx-auto">
-                  Our neighborhood helps make us unique. Explore what we love about it.{' '}
+                  {location.subheading}
                 </p>
               </div>
             </div>
 
-            {location}
+            {locations}
           </Carousel>
         </section>
         <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
