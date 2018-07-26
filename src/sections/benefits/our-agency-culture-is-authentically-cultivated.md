@@ -1,35 +1,36 @@
 ---
 id: benefits
-title: Our Agency Culture is Authentically Cultivated
-description: Building a unique work environment takes a team effort.
+title: 'Explore the benefits of our work environment. '
+description: We’ve curated a distinct company culture.
 howWeStandOut:
   points:
     - color: 'rgba(119, 194, 200, 1)'
       title: Untapped Opportunities
       description: >-
-        Leveraging moments that explore undiscovered employee talents and
-        business success.
+        Everyone here possesses hidden talents. We see their potential and
+        invite them to explore it. Investing in employees leads them to discover
+        their unique capabilities.
       image: /images/benefits-opportunities.jpg
     - color: 'rgba(212, 121, 130, 1)'
       title: Work - Life Balance
       description: >-
-        Flexibility in the office helps employees produce better work. Whether
-        it’s escaping for a mid-day yoga class or an afternoon walk, we
-        encourage taking advantage of moments that refresh.
+        Employee burnout? Not here! We encourage taking advantage of a mid-day
+        kickboxing class or a walk along the Beltline—because a flexible work
+        environment creates better work.
       image: /images/benefits-work-life-balance.jpg
     - color: 'rgba(235, 159, 107, 1)'
-      title: Lifelong Learning
+      title: LifeLong Learning
       description: >-
-        Growth comes from investing in employees. Hothouse encourages the
-        pursuit of teachable moments by attending conferences, hosting speakers
-        and incorporating current technology trends into the work environment.
+        There’s always more to know. Hothouse provides opportunities to grow,
+        whether it’s through attending conferences and workshops, or learning to
+        use the latest tools and technology.
       image: /images/benefits-life-long-learning.jpg
     - color: 'rgba(65, 89, 116, 1)'
-      title: Happy Together
+      title: One of Us
       description: >-
-        Establishing a family vibe requires creating an atmosphere built for
-        bonding. Whether it’s Wine Down Friday, suds with the Brew Crew, yoga
-        with the OmNoms or running with the Hustlers; you’re a part of something
-        bigger than yourself.
+        From wine down Fridays, to knocking back a few brewskis with the Brew
+        Crew, to yoga with the OmNoms or running with the Hustlers, you’re a
+        part of something bigger than yourself.
       image: /images/benefits-happy-together.jpg
 ---
+
