@@ -41,9 +41,10 @@ collections:
     folder: "src/sections/location"
     create: true
     fields:
-      - {label: "Headline", name: "Headline", widget: "string"}
+      - {label: "id", name: "id", widget: "hidden", default: "locations"}
+      - {label: "Headline", name: "headline", widget: "string"}
       - {label: "Subheading", name: "subheading", widget: "text"}
-      - {label: 'How we stand out.', name: howWeStandOut, widget: object, fields: [{label: Locations, name: locations, widget: list, fields: [{label: Name, name: name, widget: string}, {label: 'Job Title', name: jobTitle, widget: string},  {label: Quotation, name: quotation, widget: text}, {label: Headshot, name: headshot, widget: image}, {label: Location Name Image, name: locationNameImage, widget: image}, {label: Location Image, name: locationImage, widget: image}]}]}
+      - {label: 'Locations', name: locations, widget: object, fields: [{label: List of Locations, name: listOflocations, widget: list, fields: [{label: Name, name: name, widget: string}, {label: 'Job Title', name: jobTitle, widget: string},  {label: Quotation, name: quotation, widget: text}, {label: Headshot, name: headshot, widget: image}, {label: Location Name Image, name: locationNameImage, widget: image}, {label: Location Image, name: locationImage, widget: image}]}]}
 
   # - name: "location"
   #   label: "Location"
