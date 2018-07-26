@@ -15,8 +15,8 @@ locations:
         every day, and I’m able to scoot home at lunch to let the dogs out.
     - headshot: /images/headshot-ellie-harding.jpg
       jobTitle: Account Services Intern
-      locationImage: /images/text-old-fourth-ward.png
-      locationNameImage: /images/location-bg-inman.jpg
+      locationImage: /images/location-bg-inman.jpg
+      locationNameImage: /images/text-old-fourth-ward.png
       name: Ellie Harding
       quotation: >-
         I love that Inman Park is just down the street from the office. It has a
