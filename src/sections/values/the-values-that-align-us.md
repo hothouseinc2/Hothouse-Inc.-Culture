@@ -1,6 +1,6 @@
 ---
 id: values
-title: The Values that Align Us.
+title: Our thinking is united by our values.
 listOfValues:
   values:
     - description: >-
@@ -37,3 +37,4 @@ listOfValues:
       icon: /images/values/icon-values-6.svg
       name: Entrepreneurial
 ---
+
