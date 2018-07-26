@@ -6,7 +6,6 @@ locations:
   listOflocations: 
     - name: >-
         "Sarah O'Bryan"
-      icon: /images/values/icon-values-1.svg
       jobTitle: Creative Director
       quotation: >-
         Being one of Atlanta’s hottest in-town neighborhoods, it makes it super easy to get to work. My husband (and fellow designer) bikes or runs here every day, and I’m able to scoot home at lunch to let the dogs out.
