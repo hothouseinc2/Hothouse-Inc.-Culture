@@ -4,6 +4,7 @@ import Caret from '../../images/caret.svg'
 import MtnIllustration from '../../images/mission/bottom-illustration.svg'
 import SmallCityIllustration from '../../images/location/illustration-city.png'
 import MiddleClouds from '../../images/mission/middle-clouds.svg'
+import TopClouds from '../../images/mission/top-clouds.svg'
 import Tiles from '../Tiles'
 import IconArrow from '../../images/apply/IconArrow'
 import Carousel from 'nuka-carousel'
@@ -105,7 +106,9 @@ export default class WelcomeSection extends Component {
             <p className="mb-8 font-sans text-white tracking-normal text-xl mb-12 leading-normal text-center max-w-md mx-auto font-bold">
               {header.cta}
             </p>
-            <div dangerouslySetInnerHTML={video} />;
+            <div style={{ backgroundImage: 'url(' + TopClouds + ')', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center' }} className="w-full">
+              <div dangerouslySetInnerHTML={video} />;
+            </div>
           </header>
           <section className="mission-section mt-64">
             <div className="relative">
