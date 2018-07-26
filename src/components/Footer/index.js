@@ -32,27 +32,40 @@ export default class Footer extends Component {
           </a>
           <a
             href="http://hothouseinc.com"
+            target="_blank"
             className="font-bold text-white text-2xl mt-10 no-underline hover-underline mb-6"
           >
             hothouseinc.com
           </a>
           <ul className="list-reset flex justify-between max-w-xs w-full px-4 md-px-0">
             <li className="">
-              <a href="https://www.facebook.com/hothouseinc" className="footer__icon" target="_blank">
+              <a
+                href="https://www.facebook.com/hothouseinc"
+                className="footer__icon"
+                target="_blank"
+              >
                 <SVG src={Facebook}>
                   <img src={Facebook} />
                 </SVG>
               </a>
             </li>
             <li className="">
-              <a href="https://twitter.com/HothouseInc" className="footer__icon" target="_blank">
+              <a
+                href="https://twitter.com/HothouseInc"
+                className="footer__icon"
+                target="_blank"
+              >
                 <SVG src={Twitter}>
                   <img src={Twitter} />
                 </SVG>
               </a>
             </li>
             <li className="">
-              <a href="https://www.instagram.com/hothouseinc/" className="footer__icon" target="_blank">
+              <a
+                href="https://www.instagram.com/hothouseinc/"
+                className="footer__icon"
+                target="_blank"
+              >
                 <SVG src={Instagram}>
                   <img src={Instagram} />
                 </SVG>
@@ -61,7 +74,8 @@ export default class Footer extends Component {
             <li className="">
               <a
                 href="https://open.spotify.com/user/1214240720/playlist/1FyHZlJszVon7dMWOKkn1D"
-                target="_blank" className="footer__icon"
+                target="_blank"
+                className="footer__icon"
               >
                 <SVG src={Spotify}>
                   <img src={Spotify} />
@@ -69,7 +83,11 @@ export default class Footer extends Component {
               </a>
             </li>
             <li className="">
-              <a href="https://www.linkedin.com/company/hothouse-inc-/" className="footer__icon" target="_blank">
+              <a
+                href="https://www.linkedin.com/company/hothouse-inc-/"
+                className="footer__icon"
+                target="_blank"
+              >
                 <SVG src={LinkedIn}>
                   <img src={LinkedIn} />
                 </SVG>

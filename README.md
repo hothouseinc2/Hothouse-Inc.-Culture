@@ -60,6 +60,10 @@ _note on git gateway being enabled in your Netlify settings_
 
 - Current issue is that when a user logs into the site, it does not redirect, but displays a "You're logged in" state. Just refresh the page and you're in.
 
+- issue where initial post needs to be created locally. ex: create an example post/page/etc in yaml. Weird error that happens when creating it initially from the dashboard.
+
+![Netlify Identity User commit](https://i.imgur.com/4Hz0t0d.png)
+
 ## Resources
 
 - [Gatsby documentation](https://www.gatsbyjs.org/docs/)

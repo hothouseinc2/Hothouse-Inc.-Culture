@@ -63,7 +63,7 @@ export const layoutQuery = graphql`
             description
             greeting
             cta
-            videoURL
+            video
             howWeStandOut {
               points {
                 color

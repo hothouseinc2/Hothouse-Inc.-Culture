@@ -20,13 +20,13 @@ export default class WelcomeSection extends Component {
     let valuesSection = edges.filter(i => i.node.frontmatter.id === 'values')[0].node
       .frontmatter
     let values = valuesSection.listOfValues.values.map((i, index) => (
-      <li className="w-full md-w-1-2 lg-w-1-3 mb-32" key={index}>
+      <li className="w-full md-w-1-2 lg-w-1-3 mb-16 md-mb-32" key={index}>
         <div>
-          <div className="mb-8 w-64 h-64 relative mx-auto">
-            <img className="absolute" src={i.icon} alt="" />
+          <div className="mb-8 w-64 h-64 relative mx-auto flex justify-center">
+            <img className="absolute pin-b" src={i.icon} alt="" />
           </div>
           <div className="max-w-xs mx-auto">
-            <h3 className="mb-4 uppercase text-black-light text-3xl font-medium">
+            <h3 className="mb-4 uppercase text-black-light text-xl md-text-3xl font-medium">
               {i.name}
             </h3>
             <p className="text-lg md-text-xl text-black-lighter leading-tight">
@@ -90,24 +90,34 @@ export default class WelcomeSection extends Component {
     ))
 
     let video = {
-      __html: `<iframe class="mx-auto max-w-full block" src="https://player.vimeo.com/video/180169500" width="995" height="560" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`
+      __html: `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src=${
+        header.video
+      } style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`
     }
     return (
       <div className="welcome-section">
         <div className="bg-welcome-gradient pt-32">
           <header>
             <img src={Logo} alt="" className="block mx-auto mb-12" />
-            <h1 className="uppercase text-white text-2xl md-text-4-5xl text-center">
+            <h1 className="uppercase text-white text-2xl md-text-4-5xl text-center mb-16">
               {header.greeting}
             </h1>
-            <p className="font-sans text-white px-4 md-px-0 text-lg md-text-2xl mb-12 leading-normal text-center max-w-md mx-auto">
+            <p className="font-sans text-white px-4 md-px-0 text-lg md-text-2xl mb-16 leading-normal text-center max-w-lg mx-auto">
               {header.description}
             </p>
-            <p className="mb-8 font-sans text-white tracking-normal text-xl mb-12 leading-normal text-center max-w-md mx-auto font-bold">
+            <p className="font-sans text-white tracking-normal text-xl mb-4 leading-normal text-center max-w-md mx-auto font-semibold">
               {header.cta}
             </p>
-            <div style={{ backgroundImage: 'url(' + TopClouds + ')', backgroundRepeat: 'no-repeat', backgroundSize: 'contain', backgroundPosition: 'center' }} className="w-full">
-              <div dangerouslySetInnerHTML={video} />;
+            <div
+              style={{
+                backgroundImage: 'url(' + TopClouds + ')',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100%',
+                backgroundPosition: 'center'
+              }}
+              className="w-full"
+            >
+              <div className="max-w-xl mx-auto" dangerouslySetInnerHTML={video} />;
             </div>
           </header>
           <section className="mission-section mt-64">
@@ -137,15 +147,15 @@ export default class WelcomeSection extends Component {
         </div>
         <div className="bg-values-gradient">
           <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
-            <h2 className="uppercase text-black text-center text-4-5xl mb-32">
+            <h2 className="uppercase text-black text-center text-2xl md-text-4-5xl mb-16 md-mb-32">
               {valuesSection.title}
             </h2>
             <ul className="flex flex-col md-flex-row flex-wrap list-reset text-center">
               {values}
             </ul>
-            <img src={Caret} alt="" className="block my-16 mx-auto" />
+            <img src={Caret} alt="" className="block my-4 md-my-16 mx-auto" />
           </section>
-          <section className="benefits-section bg-grey pt-32 pb-16">
+          <section className="benefits-section bg-grey pt-16 md-pt-32 pb-16">
             <h2 className="text-black uppercase text-2xl md-text-4-5xl text-center max-w-md mx-auto mb-4">
               {uniqueEnvironment.title}
             </h2>
@@ -177,12 +187,12 @@ export default class WelcomeSection extends Component {
             {locations}
           </Carousel>
         </section>
-        <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
-          <h2 className="uppercase font-bold text-black text-2xl md-text-4-5xl mb-2 mt-8 text-center">
+        <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 pt-16 md-pt-32 pb-16">
+          <h2 className="uppercase font-bold text-black text-2xl md-text-4-5xl mb-2 text-center">
             Hothouse Unfiltered
           </h2>
-          <p className="text-black-lighter text-center text-xl md-text-2xl mb-20">
-            Take a peek into the way we work—and play.
+          <p className="text-black-lighter text-center text-xl md-text-2xl mb-8 md-mb-20">
+            Check out how we work—and play.
           </p>
           <ul className="list-reset max-w-xl mx-auto">
             <li className="big">
@@ -280,12 +290,11 @@ export default class WelcomeSection extends Component {
         <section className="referal-section bg-hothouse py-16 md-py-32">
           <div className="max-w-2xl mx-auto w-full md-flex px-4 md-px-0">
             <div className="md-w-3-4 text-center">
-              <h2 className="uppercase font-bold text-white text-2xl md-text-4-5xl mb-2 mt-8">
-                Do you belong here?{' '}
-                <span className="block md-inline">(We think so.)</span>
+              <h2 className="uppercase font-bold text-white text-2xl md-text-4-5xl mb-2 mt-3">
+                Want to work here?{' '}
               </h2>
               <p className="text-lg md-text-2xl text-white font-semibold mb-16 md-mb-0">
-                Then check out our open positions.
+                View our open positions.
               </p>
             </div>
             <div className="md-w-1-4 flex justify-center items-center md-items-start">
