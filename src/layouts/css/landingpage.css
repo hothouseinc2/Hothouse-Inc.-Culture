@@ -166,9 +166,9 @@ h2 {
     ul {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: 300px;
+      grid-template-columns: 360px;
       justify-content: center;
-      grid-auto-rows: 300px;
+      grid-auto-rows: 360px;
       grid-auto-flow: dense;
     }
 
@@ -195,7 +195,17 @@ h2 {
       }
     }
   }
-  @media screen and (min-width: 801px) {
+
+  @media screen and (min-width: 451px) {
+    .unfiltered-section {
+      ul {
+        grid-auto-rows: 250px;
+        grid-template-columns: 250px 250px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1201px) {
     .unfiltered-section {
       ul {
         grid-template-rows: 360px 360px 360px 360px 360px 360px;

@@ -37,6 +37,29 @@ export default class WelcomeSection extends Component {
       </li>
     ))
 
+    let unfilteredSection = edges.filter(i => i.node.frontmatter.id === 'unfiltered')[0]
+      .node.frontmatter
+    let unfilteredGallery = unfilteredSection.gallery.galleryImages.map((i, index) => {
+      let id
+      if (index === 0 || index === 4 || index === 6) {
+        id = 'big'
+      } else {
+        id = 'small'
+      }
+      return (
+        <li className={id} key={index}>
+          <div
+            style={{
+              backgroundImage: 'url(' + i.image + ')',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <p className="screenreader-only">{i.description}</p>
+        </li>
+      )
+    })
+
     let { location } = this.props
     let locations = location.locations.listOflocations.map((i, index) => (
       <div
@@ -194,103 +217,12 @@ export default class WelcomeSection extends Component {
         </section>
         <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 pt-16 md-pt-32 pb-16">
           <h2 className="uppercase font-bold text-black text-2xl md-text-4-5xl mb-2 text-center">
-            Hothouse Unfiltered
+            {unfilteredSection.headline}
           </h2>
           <p className="text-black-lighter text-center text-lg md-text-2xl mb-8 md-mb-20">
-            Check out how we work—and play.
+            {unfilteredSection.subheading}
           </p>
-          <ul className="list-reset max-w-xl mx-auto">
-            <li className="big">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/big1.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="small">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small1.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="small">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small2.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="small">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small3.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="big">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/big2.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="small">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small4.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="big">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/big3.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="small">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small5.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-            <li className="small">
-              <div
-                style={{
-                  backgroundImage:
-                    'url(https://s3.amazonaws.com/assets.hothouseculturesite/assets/small6.jpg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              />
-            </li>
-          </ul>
+          <ul className="list-reset max-w-xl mx-auto">{unfilteredGallery}</ul>
         </section>
         <section className="referal-section bg-hothouse py-16 md-py-32">
           <div className="max-w-2xl mx-auto w-full md-flex px-4 md-px-0">

@@ -92,6 +92,14 @@ export const layoutQuery = graphql`
                 name
               }
             }
+            headline
+            subheading
+            gallery {
+              galleryImages {
+                description
+                image
+              }
+            }
           }
         }
       }
