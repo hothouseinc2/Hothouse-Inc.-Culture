@@ -57,7 +57,7 @@ export default class Tile extends Component {
           }
           style={{ backgroundColor: this.props.color }}
         >
-          <p className="text-white text-center text-lg md-text-2xl px-4 leading-normal">
+          <p className="text-white text-center text-lg md-text-2xl px-20 leading-normal">
             {this.props.description}
           </p>
         </div>

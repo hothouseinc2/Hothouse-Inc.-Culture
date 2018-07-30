@@ -198,8 +198,8 @@ h2 {
   @media screen and (min-width: 801px) {
     .unfiltered-section {
       ul {
-        grid-template-rows: 300px 300px 300px 300px 300px 300px;
-        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 360px 360px 360px 360px 360px 360px;
+        grid-template-columns: 360px 360px 360px;
       }
 
       .big {

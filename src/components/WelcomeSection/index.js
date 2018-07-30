@@ -29,7 +29,7 @@ export default class WelcomeSection extends Component {
             <h3 className="mb-4 uppercase text-black-light text-xl md-text-3xl font-medium">
               {i.name}
             </h3>
-            <p className="text-lg md-text-xl text-black-lighter leading-tight">
+            <p className="text-lg md-text-xl text-black-lighter leading-tight px-6">
               {i.description}
             </p>
           </div>
@@ -178,9 +178,9 @@ export default class WelcomeSection extends Component {
         <section className="location-section h-screen">
           <Carousel dragging={true}>
             <div className="bg-blue h-screen text-white text-center py-32">
-              <div className="max-w-md mx-auto px-4 md-pd-0">
+              <div className="max-w-mdlg mx-auto px-4 md-pd-0">
                 <img src={SmallCityIllustration} alt="" className="mb-16 md-mb-8" />
-                <h2 className="uppercase text-2xl md-text-4-5xl mb-4 max-w-md mx-auto">
+                <h2 className="uppercase text-2xl md-text-4-5xl mb-4 max-w-lg mx-auto">
                   {location.headline}
                 </h2>
                 <p className="text-black-lighter text-lg md-text-2xl max-w-sm mx-auto">

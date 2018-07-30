@@ -46,14 +46,15 @@ collections:
       - {label: "Subheading", name: "subheading", widget: "text"}
       - {label: 'Locations', name: locations, widget: object, fields: [{label: List of Locations, name: listOflocations, widget: list, fields: [{label: Name, name: name, widget: string}, {label: 'Job Title', name: jobTitle, widget: string},  {label: Quotation, name: quotation, widget: text}, {label: Headshot, name: headshot, widget: image}, {label: Location Name Image, name: locationNameImage, widget: image}, {label: Location Image, name: locationImage, widget: image}]}]}
 
-  # - name: "location"
-  #   label: "Location"
-  #   folder: "src/sections/location"
-  #   create: true
-  #   fields:
-  #     - {label: "Headline", name: "headline", widget: "string"}
-  #     - {label: "Description", name: "description", widget: "text"}
-  #     - {label: 'How we stand out.', name: howWeStandOut, widget: object, fields: [{label: Points, name: points, widget: list, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Image, name: image, widget: image}, {label: Color (in RGBA format), name: color, widget: string}]}]}
+  - name: "unfiltered"
+    label: "Hothouse Unfiltered"
+    folder: "src/sections/unfiltered"
+    create: true
+    fields:
+      - {label: "id", name: "id", widget: "hidden", default: "unfiltered"}
+      - {label: "Headline", name: "headline", widget: "string"}
+      - {label: "Subheading", name: "subheading", widget: "text"}
+      - {label: 'Gallery', name: 'gallery', widget: object, fields: [{label: Gallery Images, name: galleryImages, widget: list, fields: [{label: Location Image, name: locationImage, widget: image}, {label: Alt Description (for screenreaders), name: description, widget: string}]}]}
 
   # - name: "pages"
   #   label: "Pages"

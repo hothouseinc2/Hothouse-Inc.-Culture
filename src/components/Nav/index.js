@@ -14,7 +14,7 @@ export default class Nav extends Component {
   // ref="about"
   render() {
     return (
-      <nav className="culture-nav bg-blue md-fixed md-w-64 md-rounded-full p-2 flex justify-center z-40">
+      <nav className="culture-nav md-fixed md-w-64 md-rounded-full p-2 flex justify-center z-40">
         <a
           href="#"
           className="w-1-4 flex justify-center"
