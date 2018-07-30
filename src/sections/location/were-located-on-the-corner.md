@@ -1,6 +1,6 @@
 ---
 id: locations
-headline: We’re located on the corner of risk and potential.
+headline: 'We’re located at the corner of progress and potential. '
 subheading: Our neighborhood helps make us unique. Explore what we love about it.
 locations:
   listOflocations:
