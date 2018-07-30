@@ -54,7 +54,7 @@ collections:
       - {label: "id", name: "id", widget: "hidden", default: "unfiltered"}
       - {label: "Headline", name: "headline", widget: "string"}
       - {label: "Subheading", name: "subheading", widget: "text"}
-      - {label: 'Gallery', name: 'gallery', widget: object, fields: [{label: Gallery Images, name: galleryImages, widget: list, fields: [{label: Location Image, name: locationImage, widget: image}, {label: Alt Description (for screenreaders), name: description, widget: string}]}]}
+      - {label: 'Gallery', name: 'gallery', widget: object, fields: [{label: Gallery Images, name: galleryImages, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Alt Description (for screenreaders), name: description, widget: string}]}]}
 
   # - name: "pages"
   #   label: "Pages"
