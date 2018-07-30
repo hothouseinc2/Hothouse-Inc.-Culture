@@ -7,6 +7,6 @@ description: >-
   mission and values, which guide our work and the way we relate to each other,
   and peek behind the scenes into what makes this an engaging place to work.
 cta: 'Watch the video to learn more:'
-video: 'https://player.vimeo.com/video/180169500'
+video: 'https://player.vimeo.com/video/281979530'
 ---
 
