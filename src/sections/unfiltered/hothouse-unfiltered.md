@@ -9,8 +9,8 @@ gallery:
     - image: /images/p02.jpg
     - image: /images/p03.jpg
     - image: /images/p04.jpg
-    - image: /images/p06.jpg
     - image: /images/p05.jpg
+    - image: /images/p06.jpg
     - image: /images/p07.jpg
     - image: /images/p08.jpg
     - image: /images/p09.jpg
