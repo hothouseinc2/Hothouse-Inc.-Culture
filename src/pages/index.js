@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import WelcomeSection from '../components/WelcomeSection'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
 import bg from '../images/footer/illustration.png'
