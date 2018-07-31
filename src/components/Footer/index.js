@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import bg from '../../images/footer/illustration.png'
 import logo from '../../images/footer/logo-hothouse.svg'
 import Facebook from '../../images/footer/icon-facebook.svg'
 import Twitter from '../../images/footer/icon-twitter.svg'
@@ -11,14 +10,7 @@ import SVG from 'react-inlinesvg'
 export default class Footer extends Component {
   render() {
     return (
-      <footer
-        className="pt-32 h-156 bg-blue"
-        style={{
-          backgroundImage: 'url(' + bg + ')',
-          backgroundSize: 'auto',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+      <React.Fragment>
         <div className="text-white flex justify-center items-center flex-col leading-normal">
           <img src={logo} alt="" className="mx-auto block mb-4" />
           <address className="text-center roman">
@@ -95,7 +87,7 @@ export default class Footer extends Component {
             </li>
           </ul>
         </div>
-      </footer>
+      </React.Fragment>
     )
   }
 }
