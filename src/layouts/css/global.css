@@ -19,3 +19,23 @@ ul {
   height: 1px;
   overflow: hidden;
 }
+
+@media screen and (max-width: 767px) {
+  .mobile-nav--hidden {
+    transform: translateY(-100%);
+  }
+
+  .mobile-nav--hidden.mobile-nav--present {
+    transform: translateY(0px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .md-screenreader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}

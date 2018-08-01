@@ -1,5 +1,5 @@
 .culture-nav__inner {
-  background: rgba(65, 89, 116, 0.5);
+  @apply bg-white;
 }
 
 .min-h-600 {
@@ -261,6 +261,9 @@ h2 {
       position: absolute;
       transform: rotate(180deg) translateX(125%) translateY(150%);
     }
+  }
+  .culture-nav__inner {
+    background: rgba(65, 89, 116, 0.5);
   }
 }
 

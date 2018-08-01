@@ -5,7 +5,7 @@ export default class Referral extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="max-w-2xl mx-auto w-full md-flex px-4 md-px-0">
+        <div className="max-w-lg mx-auto w-full md-flex px-4 md-px-0">
           <div className="md-w-3-4 text-center">
             <h2 className="uppercase font-bold text-white text-2xl md-text-4-5xl mb-2 mt-3">
               Want to work here?{' '}
