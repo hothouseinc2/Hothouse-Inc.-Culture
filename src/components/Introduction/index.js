@@ -35,7 +35,7 @@ export default class Introduction extends Component {
             }}
             className="w-full"
           >
-            <div className="max-w-xl mx-auto" dangerouslySetInnerHTML={video} />;
+            <div className="max-w-xl mx-auto" dangerouslySetInnerHTML={video} />
           </div>
         </header>
       </React.Fragment>

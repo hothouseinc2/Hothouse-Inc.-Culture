@@ -9,22 +9,25 @@ export default class TemplateWrapper extends Component {
     return (
       <div className="flex flex-col font-sans min-h-screen text-grey-darkest overflow-x-hidden">
         <Helmet
-          title="Hothouse Inc. | Culture"
+          title="Hi, we’re Hothouse."
           meta={[
             {
               name: 'description',
               content:
-                'Hothouse is an agency driven by innovation, accountability and a deep desire to understand your brand, your customers and your competitors.'
+                'This is a unique place – one where co-workers get together in our off time, and we actually look forward to showing up every morning.'
             },
             {
               name: 'viewport',
               content: 'width=device-width, initial-scale=1'
             },
-            { itemprop: 'name', content: 'Hothouse Inc. Culture Site' },
+            {
+              itemprop: 'name',
+              content: 'Hi, we’re Hothouse.'
+            },
             {
               itemprop: 'description',
               content:
-                'Hothouse is an agency driven by innovation, accountability and a deep desire to understand your brand, your customers and your competitors.'
+                'This is a unique place – one where co-workers get together in our off time, and we actually look forward to showing up every morning.'
             }, // <!-- Schema image tag must be at least 180x120px -->
             { itemprop: 'image', content: 'assets/google-plus-image.png' }, // <!-- Twitter Card data -->
             { name: 'twitter:card', content: 'summary_large_image' },
@@ -33,7 +36,7 @@ export default class TemplateWrapper extends Component {
             {
               name: 'twitter:description',
               content:
-                'Hothouse is an agency driven by innovation, accountability and a deep desire to understand your brand, your customers and your competitors.'
+                'Hi, we’re Hothouse. This is a unique place – one where co-workers get together in our off time, and we actually look forward to showing up every morning.'
             },
             { name: 'twitter:creator', content: '@HothouseInc' }, // <!-- Twitter summary card with large image must be at least 280x150px -->
             { name: 'twitter:image:src', content: 'assets/twitter-image.png' }, // <!-- Open Graph data -->
@@ -44,7 +47,7 @@ export default class TemplateWrapper extends Component {
             {
               property: 'og:description',
               content:
-                'Hothouse is an agency driven by innovation, accountability and a deep desire to understand your brand, your customers and your competitors.'
+                'Hi, we’re Hothouse. This is a unique place – one where co-workers get together in our off time, and we actually look forward to showing up every morning.'
             },
             { property: 'og:site_name', content: 'Hothouse Inc. Culture Site' },
             { name: 'theme-color', content: '#F7484E' }

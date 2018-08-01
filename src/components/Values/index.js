@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Carousel from 'nuka-carousel'
 import Caret from '../../images/caret.svg'
 
 export default class Values extends Component {
