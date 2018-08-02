@@ -1,10 +1,13 @@
-import 'intersection-observer'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import './generated.css'
 
 export default class TemplateWrapper extends Component {
+  componentDidMount = () => {
+    import 'intersection-observer'
+  }
+
   render() {
     return (
       <div className="flex flex-col font-sans min-h-screen text-grey-darkest overflow-x-hidden">
