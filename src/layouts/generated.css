@@ -3587,6 +3587,10 @@ h2 span {
   min-height: 6rem;
 }
 
+.min-h-43 {
+  min-height: 43rem;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -7687,6 +7691,10 @@ h2 span {
     min-height: 6rem;
   }
 
+  .sm\-min-h-43 {
+    min-height: 43rem;
+  }
+
   .sm\-min-h-full {
     min-height: 100%;
   }
@@ -11770,6 +11778,10 @@ h2 span {
 
   .md\-min-h-24 {
     min-height: 6rem;
+  }
+
+  .md\-min-h-43 {
+    min-height: 43rem;
   }
 
   .md\-min-h-full {
@@ -15857,6 +15869,10 @@ h2 span {
     min-height: 6rem;
   }
 
+  .lg\-min-h-43 {
+    min-height: 43rem;
+  }
+
   .lg\-min-h-full {
     min-height: 100%;
   }
@@ -19940,6 +19956,10 @@ h2 span {
 
   .xl\-min-h-24 {
     min-height: 6rem;
+  }
+
+  .xl\-min-h-43 {
+    min-height: 43rem;
   }
 
   .xl\-min-h-full {

@@ -37,6 +37,7 @@ export default class IndexPage extends Component {
   handleClick = e => {
     e.preventDefault()
     this.refs[e.currentTarget.dataset.ref].scrollIntoView({
+      block: 'start',
       behavior: 'smooth'
     })
   }
@@ -45,7 +46,7 @@ export default class IndexPage extends Component {
     if (inView) {
       if (this.state.inView.filter(i => i.name === name).length === 0) {
         this.setState({
-          inView: [...this.state.inView, { name, percentage }]
+          inView: [{ name, percentage }]
         })
       }
     } else {
@@ -86,21 +87,22 @@ export default class IndexPage extends Component {
           </div>
         </div>
         <div className="bg-values-gradient">
-          <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
-            <div ref="values" />
-            <ScrollPercentage
-              onChange={(percentage, inView) => {
-                this.isInView('Values', inView, percentage)
-              }}
-            >
+          <ScrollPercentage
+            onChange={(percentage, inView) => {
+              this.isInView('Values', inView, percentage)
+            }}
+          >
+            <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
+              <div ref="values" />
+
               <Values
                 values={
                   edges.filter(i => i.node.frontmatter.id === 'values')[0].node
                     .frontmatter
                 }
               />
-            </ScrollPercentage>
-          </section>
+            </section>
+          </ScrollPercentage>
         </div>
 
         <ScrollPercentage
@@ -119,12 +121,12 @@ export default class IndexPage extends Component {
           </section>
         </ScrollPercentage>
 
-        <ScrollPercentage
-          onChange={(percentage, inView) => {
-            this.isInView('Location', inView, percentage)
-          }}
-        >
-          <section className="location-section h-screen">
+        <section className="location-section h-screen">
+          <ScrollPercentage
+            onChange={(percentage, inView) => {
+              this.isInView('Location', inView, percentage)
+            }}
+          >
             <div ref="location" />
             <Location
               location={
@@ -132,25 +134,24 @@ export default class IndexPage extends Component {
                   .frontmatter
               }
             />
-          </section>
-        </ScrollPercentage>
+          </ScrollPercentage>
+        </section>
 
-        <ScrollPercentage
-          onChange={(percentage, inView) => {
-            this.isInView('Photo Gallery', inView, percentage)
-          }}
-        >
-          <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 pt-16 md-pt-32 pb-16">
-            <div ref="unfiltered" />
-
+        <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 pt-16 md-pt-32 pb-16">
+          <div ref="unfiltered" />
+          <ScrollPercentage
+            onChange={(percentage, inView) => {
+              this.isInView('Photo Gallery', inView, percentage)
+            }}
+          >
             <Unfiltered
               unfiltered={
                 edges.filter(i => i.node.frontmatter.id === 'unfiltered')[0].node
                   .frontmatter
               }
             />
-          </section>
-        </ScrollPercentage>
+          </ScrollPercentage>
+        </section>
         <section className="referal-section bg-hothouse py-16 md-py-32">
           <Referral />
         </section>

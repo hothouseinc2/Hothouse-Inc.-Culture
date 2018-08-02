@@ -58,7 +58,7 @@ export default class Nav extends Component {
             }}
           >
             <span className="culture-nav__item xl-screenreader-only text-2xl my-4">
-              Introduction
+              Meet Us
             </span>
             <span className="hidden xl-inline-block">
               <SVG src={NavIcon} />
@@ -103,7 +103,7 @@ export default class Nav extends Component {
             }}
           >
             <span className="culture-nav__item xl-screenreader-only text-2xl my-4">
-              Benefits
+              Work Environment
             </span>
             <span className="hidden xl-inline-block">
               <SVG src={NavIcon} />
@@ -133,7 +133,7 @@ export default class Nav extends Component {
             }}
           >
             <span className="culture-nav__item xl-screenreader-only text-2xl my-4">
-              Hothouse Unfiltered
+              Photo Gallery
             </span>
             <span className="hidden xl-inline-block">
               <SVG src={NavIcon} />

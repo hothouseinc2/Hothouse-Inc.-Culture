@@ -1,9 +1,30 @@
 import React, { Component } from 'react'
 
 export default class Unfiltered extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      images: this.props.unfiltered.gallery.galleryImages
+    }
+  }
+
+  shuffleArray = arr =>
+    arr
+      .map(a => [Math.random(), a])
+      .sort((a, b) => a[0] - b[0])
+      .map(a => a[1])
+
+  componentDidMount = () => {
+    this.setState({
+      images: this.shuffleArray(this.props.unfiltered.gallery.galleryImages)
+    })
+  }
+
   render() {
+    console.log(this.state)
     let unfilteredSection = this.props.unfiltered
-    let unfilteredGallery = unfilteredSection.gallery.galleryImages.map((i, index) => {
+
+    let unfilteredGallery = this.state.images.map((i, index) => {
       let id
       if (index === 0 || index === 4 || index === 6) {
         id = 'big'
