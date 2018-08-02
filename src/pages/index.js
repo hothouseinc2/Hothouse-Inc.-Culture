@@ -36,25 +36,23 @@ export default class IndexPage extends Component {
 
   handleClick = e => {
     e.preventDefault()
-    this.refs[e.currentTarget.dataset.ref].scrollIntoView({ behavior: 'smooth' })
+    this.refs[e.currentTarget.dataset.ref].scrollIntoView({
+      behavior: 'smooth'
+    })
   }
 
   isInView = (name, inView, percentage) => {
     if (inView) {
       if (this.state.inView.filter(i => i.name === name).length === 0) {
-        this.setState(
-          {
-            inView: [...this.state.inView, { name, percentage }]
-          }
-        )
+        this.setState({
+          inView: [...this.state.inView, { name, percentage }]
+        })
       }
     } else {
       if (this.state.inView.filter(i => i.name === name).length > 0) {
-        this.setState(
-          {
-            inView: [...this.state.inView.filter(i => i.name !== name)]
-          }
-        )
+        this.setState({
+          inView: [...this.state.inView.filter(i => i.name !== name)]
+        })
       }
     }
   }
@@ -66,7 +64,8 @@ export default class IndexPage extends Component {
       <React.Fragment>
         <Nav handleClick={e => this.handleClick(e)} highlight={toHighlight} />
 
-        <div className="welcome-section" ref="introduction">
+        <div className="welcome-section">
+          <div ref="introduction" />
           <div className="bg-welcome-gradient pt-32">
             <ScrollPercentage
               onChange={(percentage, inView) => {
@@ -81,17 +80,14 @@ export default class IndexPage extends Component {
                 this.isInView('Mission', inView, percentage)
               }}
             >
-              <div ref="mission">
-                <Mission />
-              </div>
+              <div ref="mission" />
+              <Mission />
             </ScrollPercentage>
           </div>
         </div>
         <div className="bg-values-gradient">
-          <section
-            className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16"
-            ref="values"
-          >
+          <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
+            <div ref="values" />
             <ScrollPercentage
               onChange={(percentage, inView) => {
                 this.isInView('Values', inView, percentage)
@@ -112,10 +108,8 @@ export default class IndexPage extends Component {
             this.isInView('Work Environment', inView, percentage)
           }}
         >
-          <section
-            className="benefits-section bg-grey pt-16 md-pt-32 pb-16"
-            ref="benefits"
-          >
+          <section className="benefits-section bg-grey pt-16 md-pt-32 pb-16">
+            <div ref="benefits" />
             <Benefits
               benefits={
                 edges.filter(i => i.node.frontmatter.id === 'benefits')[0].node
@@ -130,7 +124,8 @@ export default class IndexPage extends Component {
             this.isInView('Location', inView, percentage)
           }}
         >
-          <section className="location-section h-screen" ref="location">
+          <section className="location-section h-screen">
+            <div ref="location" />
             <Location
               location={
                 edges.filter(i => i.node.frontmatter.id === 'locations')[0].node
@@ -145,10 +140,9 @@ export default class IndexPage extends Component {
             this.isInView('Photo Gallery', inView, percentage)
           }}
         >
-          <section
-            className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 pt-16 md-pt-32 pb-16"
-            ref="unfiltered"
-          >
+          <section className="unfiltered-section max-w-2xl px-4 mx-auto md-pb-16 pt-16 md-pt-32 pb-16">
+            <div ref="unfiltered" />
+
             <Unfiltered
               unfiltered={
                 edges.filter(i => i.node.frontmatter.id === 'unfiltered')[0].node
@@ -164,7 +158,8 @@ export default class IndexPage extends Component {
           className="pt-32 h-156 bg-blue"
           style={{
             backgroundImage: 'url(' + bg + ')',
-            backgroundSize: 'auto',
+            backgroundSize: '100% auto',
+            backgroundPosition: 'bottom',
             backgroundRepeat: 'no-repeat'
           }}
         >

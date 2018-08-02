@@ -40,7 +40,7 @@ export default class Tile extends Component {
               <h4 className="text-white max-w-xs text-xl md-text-4xl uppercase font-thin py-10">
                 {this.props.title}
               </h4>
-              <button onClick={() => this.clicked()}>
+              <button className="tile__arrow-btn" onClick={() => this.clicked()}>
                 <SVG src={ArrowRight} />
               </button>
             </div>
@@ -57,7 +57,7 @@ export default class Tile extends Component {
             {this.props.description}
           </p>
 
-          <button onClick={() => this.clicked()}>
+          <button className="tile__arrow-btn" onClick={() => this.clicked()}>
             <SVG src={ArrowLeft} />
           </button>
         </div>

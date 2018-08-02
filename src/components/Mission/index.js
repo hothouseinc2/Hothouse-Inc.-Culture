@@ -8,7 +8,7 @@ export default class Mission extends Component {
       <section className="mission-section mt-64">
         <div className="relative">
           <img
-            className="mission-section__middle-clouds absolute"
+            className="mission-section__middle-clouds center-absolute"
             src={MiddleClouds}
             alt=""
           />

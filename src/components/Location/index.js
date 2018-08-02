@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import Carousel from 'nuka-carousel'
+import Carousel from '../Carousel/index'
 import SmallCityIllustration from '../../images/location/illustration-city.png'
+// import { PreviousButton } from '../NewControls'
 
 export default class Location extends Component {
   render() {
@@ -47,10 +48,13 @@ export default class Location extends Component {
         </div>
       </div>
     ))
-
     return (
       <React.Fragment>
-        <Carousel dragging={true}>
+        <Carousel
+          dragging={true}
+          // renderBottomLeftControls={({ previousSlide }) => PreviousButton}
+          // decorators={Decorators}
+        >
           <div className="bg-blue h-screen text-white text-center py-32 min-h-600">
             <div className="max-w-mdlg mx-auto px-4 md-pd-0">
               <img src={SmallCityIllustration} alt="" className="mb-16 md-mb-8" />

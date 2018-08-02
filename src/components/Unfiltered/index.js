@@ -32,7 +32,7 @@ export default class Unfiltered extends Component {
         <p className="text-black-lighter text-center text-lg md-text-2xl mb-8 md-mb-20">
           {unfilteredSection.subheading}
         </p>
-        <ul className="list-reset max-w-xl mx-auto">{unfilteredGallery}</ul>
+        <ul className="list-reset mx-auto">{unfilteredGallery}</ul>
       </React.Fragment>
     )
   }

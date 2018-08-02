@@ -20,7 +20,7 @@ export default class Introduction extends Component {
           <h1 className="uppercase text-white text-2xl md-text-4-5xl text-center mb-16">
             {header.greeting}
           </h1>
-          <p className="font-sans text-white px-4 md-px-0 text-lg md-text-2xl mb-16 leading-normal text-center max-w-lg mx-auto">
+          <p className="font-sans text-white px-4 md-px-4 lg-px-0 text-lg md-text-2xl mb-16 leading-normal text-center max-w-lg mx-auto">
             {header.description}
           </p>
           <p className="font-sans text-white tracking-normal text-xl mb-4 leading-normal text-center max-w-md mx-auto font-semibold">
