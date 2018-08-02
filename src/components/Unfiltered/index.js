@@ -50,7 +50,7 @@ export default class Unfiltered extends Component {
         <h2 className="uppercase font-bold text-black text-2xl md-text-4-5xl mb-2 text-center">
           {unfilteredSection.headline}
         </h2>
-        <p className="text-black-lighter text-center text-lg md-text-2xl mb-8 md-mb-20">
+        <p className="text-black-lighter text-center text-lg md-text-2xl mb-8 md-mb-20 md-font-semibold">
           {unfilteredSection.subheading}
         </p>
         <ul className="list-reset mx-auto">{unfilteredGallery}</ul>
