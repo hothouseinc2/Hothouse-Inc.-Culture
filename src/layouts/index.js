@@ -5,7 +5,7 @@ import './generated.css'
 
 export default class TemplateWrapper extends Component {
   componentDidMount = () => {
-    import 'intersection-observer'
+    require('intersection-observer')
   }
 
   render() {
