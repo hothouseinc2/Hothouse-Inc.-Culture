@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import './generated.css'
-import 'intersection-observer'
 
 export default class TemplateWrapper extends Component {
   componentDidMount = () => {
