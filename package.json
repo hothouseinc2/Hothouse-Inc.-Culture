@@ -19,6 +19,7 @@
     "gatsby-transformer-remark": "^1.7.33",
     "gatsby-transformer-sharp": "^1.6.27",
     "intersection-observer": "^0.5.0",
+    "intersection-observer-polyfill": "^0.1.0",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "1.7.0",
