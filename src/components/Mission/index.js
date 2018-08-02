@@ -24,9 +24,9 @@ export default class Mission extends Component {
           </h2>
         </div>
         <p className="text-black-lighter text-lg md-text-2xl px-4 md-px-0 max-w-sm md-max-w-md lg-max-w-lg mb-24 mx-auto text-center leading-normal">
-          We rewrite the equations to our clients’ problems, so we can create different
-          solutions than everyone else. We look for answers in unlikely places and bring
-          unexpected thinking to all our clients’ challenges.{' '}
+          We rewrite the equations to our clients’ problems, to create different
+          solutions. We look for answers in unlikely places and bring unexpected thinking
+          to all our clients’ challenges.{' '}
         </p>
         <img
           className="max-w-3xl px-4 block mx-auto pb-8 w-full"
