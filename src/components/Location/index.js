@@ -1,14 +1,13 @@
 import React, { Component, Fragment } from 'react'
 import Carousel from '../Carousel/index'
 import SmallCityIllustration from '../../images/location/illustration-city.png'
-// import { PreviousButton } from '../NewControls'
 
 export default class Location extends Component {
   render() {
     let { location } = this.props
     let locations = location.locations.listOflocations.map((i, index) => (
       <div
-        className="h-screen flex justify-center items-center min-h-600"
+        className="flex c-height justify-center items-center"
         key={index}
         style={{
           backgroundImage: 'url(' + i.locationImage + ')',
@@ -55,7 +54,7 @@ export default class Location extends Component {
           // renderBottomLeftControls={({ previousSlide }) => PreviousButton}
           // decorators={Decorators}
         >
-          <div className="bg-blue h-screen text-white text-center py-32 min-h-600">
+          <div className="bg-blue c-height text-white text-center">
             <div className="max-w-mdlg mx-auto px-4 md-pd-0">
               <img src={SmallCityIllustration} alt="" className="mb-16 md-mb-8" />
               <h2 className="uppercase text-2xl md-text-4-5xl mb-4 max-w-lg mx-auto">

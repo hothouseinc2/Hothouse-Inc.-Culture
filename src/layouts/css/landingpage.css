@@ -268,9 +268,10 @@ h2 {
     }
   }
 }
+
 .slider-control-centerleft {
   position: absolute;
-  bottom: -6%;
+  bottom: 0%;
   left: 20vw;
   transform: translateY(-50%);
   font-size: 56px;
@@ -278,13 +279,23 @@ h2 {
 
 .slider-control-centerright {
   position: absolute;
-  bottom: -6%;
+  bottom: 0%;
   right: 20vw;
   transform: translateY(-50%);
   font-size: 56px;
 }
 
+.c-height {
+  /* @apply pt-16 pb-32; */
+  @apply flex flex-col justify-center;
+  min-height: 800px;
+}
+
 @media screen and (min-width: 1200px) {
+  .c-height {
+    /* @apply pt-32 pb-64; */
+  }
+
   .culture-nav {
     transform: rotate(90deg) translateY(-50%);
     left: -80px;

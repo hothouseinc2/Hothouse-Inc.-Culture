@@ -1119,13 +1119,20 @@ h2 span {
 .slider-control-centerleft,
 .slider-control-centerright {
   position: absolute;
-  bottom: -6%;
+  bottom: 0;
   transform: translateY(-50%);
   font-size: 56px;
 }
 
 .slider-control-centerright {
   right: 20vw;
+}
+
+.c-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 800px;
 }
 
 @media screen and (min-width:1200px) {

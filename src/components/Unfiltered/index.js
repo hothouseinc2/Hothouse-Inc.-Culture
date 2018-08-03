@@ -38,7 +38,8 @@ export default class Unfiltered extends Component {
             style={{
               backgroundImage: 'url(' + i.image + ')',
               backgroundSize: 'cover',
-              backgroundPosition: 'center'
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
             }}
           />
           <p className="screenreader-only">{i.description}</p>

@@ -122,7 +122,7 @@ export default class IndexPage extends Component {
           </section>
         </ScrollPercentage>
 
-        <section className="location-section h-screen">
+        <section className="location-section">
           <ScrollPercentage
             onChange={(percentage, inView) => {
               this.isInView('Location', inView, percentage)
