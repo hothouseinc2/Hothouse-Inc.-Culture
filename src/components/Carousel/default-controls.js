@@ -72,7 +72,7 @@ export class PagingDots extends React.Component {
     return {
       position: 'relative',
       margin: 0,
-      top: -10,
+      top: -65,
       padding: 0
     }
   }

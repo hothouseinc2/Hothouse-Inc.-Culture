@@ -273,8 +273,13 @@ h2 {
   position: absolute;
   bottom: 0%;
   left: 20vw;
+  float:right;
   transform: translateY(-50%);
   font-size: 56px;
+}
+
+.slider-control-centerleft button {
+  float:right;
 }
 
 .slider-control-centerright {
@@ -313,11 +318,13 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   .slider-control-centerleft {
-    left: 30vw;
+    right: 65%;
+    transform: translateX(50%) translateY(-50%);
   }
 
   .slider-control-centerright {
-    right: 30vw;
+    left: 65%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }
 

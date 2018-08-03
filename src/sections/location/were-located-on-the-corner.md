@@ -7,7 +7,7 @@ locations:
     - headshot: /images/headshot-sarah.jpg
       jobTitle: Creative Director
       locationImage: /images/location-background-test.jpg
-      locationNameImage: /images/text-old-fourth-ward.png
+      locationNameImage: /images/location-old-fourth-ward.svg
       name: Sarah O'Bryan
       quotation: >-
         Being one of Atlanta’s hottest in-town neighborhoods, it makes it super
@@ -16,7 +16,7 @@ locations:
     - headshot: /images/location-headshot-nakia.jpg
       jobTitle: Administrative Coordinator
       locationImage: /images/location-bg-beltline.jpg
-      locationNameImage: /images/text-old-fourth-ward.png
+      locationNameImage: /images/location-beltline.svg
       name: Nakia Henderson
       quotation: >-
         I love working across the street from the Atlanta Beltline because it
@@ -25,7 +25,7 @@ locations:
     - headshot: /images/headshot-ellie-harding.jpg
       jobTitle: Account Service Intern
       locationImage: /images/location-bg-inman.jpg
-      locationNameImage: /images/text-old-fourth-ward.png
+      locationNameImage: /images/location-inman-park.svg
       name: Ellie Harding
       quotation: >-
         I love that Inman Park is just down the street from the office. It has a
@@ -34,7 +34,7 @@ locations:
     - headshot: /images/location-headshot-barbara.jpg
       jobTitle: Copywriter
       locationImage: /images/location-bg-pcm.jpg
-      locationNameImage: /images/text-old-fourth-ward.png
+      locationNameImage: /images/location-ponce-city-market.svg
       name: Barbara Tushbant
       quotation: >-
         I eat lunch at Ponce City Market entirely too much. It’s a perfect storm
