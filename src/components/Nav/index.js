@@ -140,7 +140,7 @@ export default class Nav extends Component {
             </span>
           </a>
         </nav>
-        <span className="culture-nav__text hidden xl-inline-block">
+        <span className="culture-nav__text text-black-lighter hidden xl-inline-block">
           {(this.props.highlight[0] && this.props.highlight[0].name) || ''}
         </span>
       </div>

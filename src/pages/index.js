@@ -32,6 +32,7 @@ export default class IndexPage extends Component {
 
   componentDidMount() {
     require('smoothscroll-polyfill').polyfill()
+    require('intersection-observer')
   }
 
   handleClick = e => {

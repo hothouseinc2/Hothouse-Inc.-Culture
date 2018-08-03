@@ -4,11 +4,6 @@ import Helmet from 'react-helmet'
 import './generated.css'
 
 export default class TemplateWrapper extends Component {
-  componentDidMount = () => {
-    require('intersection-observer')
-    // require('intersection-observer-polyfill')
-  }
-
   render() {
     return (
       <div className="flex flex-col font-sans min-h-screen text-grey-darkest overflow-x-hidden">
