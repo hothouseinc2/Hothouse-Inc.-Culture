@@ -36,7 +36,7 @@ export default class Introduction extends Component {
             className="w-full"
           >
           <div className="max-w-xl mx-auto">
-            <video className="h-auto" src="http://player.vimeo.com/external/85569724.sd.webm?s=43df5df0d733011263687d20a47557e4" controls></video>
+            <video className="h-auto" src="https://player.vimeo.com/external/85569724.sd.webm?s=43df5df0d733011263687d20a47557e4" controls></video>
           </div>
           </div>
         </header>
