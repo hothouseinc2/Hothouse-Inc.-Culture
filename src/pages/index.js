@@ -61,6 +61,7 @@ export default class IndexPage extends Component {
 
   render() {
     let { edges } = this.props.data.allMarkdownRemark
+    let optimImages = this.props.data.allImageSharp.edges
     let toHighlight = this.state.inView.filter(i => i.percentage >= 0 && i.name !== null)
     return (
       <React.Fragment>
@@ -146,6 +147,7 @@ export default class IndexPage extends Component {
             }}
           >
             <Unfiltered
+              optimImages={optimImages}
               unfiltered={
                 edges.filter(i => i.node.frontmatter.id === 'unfiltered')[0].node
                   .frontmatter
@@ -174,26 +176,17 @@ export default class IndexPage extends Component {
 
 export const layoutQuery = graphql`
   query layoutQuery {
-    site {
-      siteMetadata {
-        benefits {
-          title
-          description
-          imageURL
-          color
-        }
-        values {
-          icon
-          heading
-          description
-        }
-        location {
-          fullName
-          jobTitle
-          quotation
-          image
-          locationImageText
-          locationImage
+    allImageSharp {
+      edges {
+        node {
+          id
+          sizes {
+            srcWebp
+            srcSet
+            srcSetWebp
+            originalName
+            src
+          }
         }
       }
     }

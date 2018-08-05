@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import Img from "gatsby-image";
+import Img from 'gatsby-image'
 
 export default class Unfiltered extends Component {
   constructor(props) {
@@ -22,28 +22,41 @@ export default class Unfiltered extends Component {
   }
 
   render() {
-    console.log(this.state)
     let unfilteredSection = this.props.unfiltered
+    // console.log(unfilteredSection.gallery.galleryImages)
+    let newImages = []
+    unfilteredSection.gallery.galleryImages.map(i => {
+      let item = this.props.optimImages.filter(x =>
+        i.image.includes(x.node.sizes.originalName)
+      )
+      newImages.push(item)
+    })
 
-    let unfilteredGallery = this.state.images.map((i, index) => {
+    // console.log(newImages)
+
+    // let sizes = this.props.optimImages.filter(x =>
+    // i.image.includes(x.node.sizes.originalName)
+    // )
+    // unfiltered gallery should
+    let unfilteredGallery = newImages.map((i, index) => {
+      // console.log(sizes)
+      // console.log(i.image.includes('.jpg'))
       let id
       if (index === 0 || index === 4 || index === 6) {
         id = 'big'
       } else {
         id = 'small'
       }
+      console.log(i[0].node.sizes)
       return (
         <li className={id} key={index}>
-          <div
-            style={{
-              backgroundImage: 'url(' + i.image + ')',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          />
-          <p className="screenreader-only">{i.description}</p>
+          <Img sizes={i[0].node.sizes} />
+          {/*<p className="screenreader-only">{i.description}</p>*/}
         </li>
+
+        // <li className={'big'} key={index}>
+        // {/*<Img sizes={sizes} />*/}
+        // </li>
       )
     })
 
@@ -56,6 +69,7 @@ export default class Unfiltered extends Component {
           {unfilteredSection.subheading}
         </p>
         <ul className="list-reset mx-auto">{unfilteredGallery}</ul>
+        {/* <Img resolutions={this.state.images[0].image} /> */}
       </React.Fragment>
     )
   }
