@@ -72,3 +72,12 @@ _note on git gateway being enabled in your Netlify settings_
 ## License
 
 [MIT](https://github.com/taylorbryant/gatsby-starter-tailwind/blob/master/LICENSE.md)
+
+## Analytics
+
+Looks to add Google Analytics or Google Tag Manager?
+Check out [this link](https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/?=google)
+
+Please don't just inject a script at the top.
+
+Check your speed [here](https://developers.google.com/speed/pagespeed/insights/) to make sure you're caching the analytics file properly and not changing the site's speed dramatically.
