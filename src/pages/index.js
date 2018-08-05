@@ -63,6 +63,7 @@ export default class IndexPage extends Component {
     let { edges } = this.props.data.allMarkdownRemark
     let optimImages = this.props.data.allImageSharp.edges
     let toHighlight = this.state.inView.filter(i => i.percentage >= 0 && i.name !== null)
+
     return (
       <React.Fragment>
         <Nav handleClick={e => this.handleClick(e)} highlight={toHighlight} />

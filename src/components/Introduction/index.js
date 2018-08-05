@@ -8,11 +8,11 @@ export default class Introduction extends Component {
     let { edges } = this.props.data
     let header = edges.filter(i => i.node.frontmatter.id === 'header')[0].node.frontmatter
 
-    // let video = {
-    //   __html: `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src=${
-    //     header.video
-    //   } style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`
-    // }
+    let video = {
+      __html: `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src=${
+        header.video
+      } style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`
+    }
     return (
       <React.Fragment>
         <header ref="introduction">
@@ -35,9 +35,9 @@ export default class Introduction extends Component {
             }}
             className="w-full"
           >
-          <div className="max-w-xl mx-auto">
-            <video className="h-auto" src="https://player.vimeo.com/external/85569724.sd.webm?s=43df5df0d733011263687d20a47557e4" controls></video>
-          </div>
+            <div className="max-w-xl mx-auto" dangerouslySetInnerHTML={video}>
+              {/* <video className="h-auto" src="https://player.vimeo.com/external/85569724.sd.webm?s=43df5df0d733011263687d20a47557e4" controls></video> */}
+            </div>
           </div>
         </header>
       </React.Fragment>
