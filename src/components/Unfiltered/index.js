@@ -32,31 +32,17 @@ export default class Unfiltered extends Component {
       newImages.push(item)
     })
 
-    // console.log(newImages)
-
-    // let sizes = this.props.optimImages.filter(x =>
-    // i.image.includes(x.node.sizes.originalName)
-    // )
-    // unfiltered gallery should
     let unfilteredGallery = newImages.map((i, index) => {
-      // console.log(sizes)
-      // console.log(i.image.includes('.jpg'))
       let id
       if (index === 0 || index === 4 || index === 6) {
         id = 'big'
       } else {
         id = 'small'
       }
-      console.log(i[0].node.sizes)
       return (
         <li className={id} key={index}>
-          <Img sizes={i[0].node.sizes} />
-          {/*<p className="screenreader-only">{i.description}</p>*/}
+          <Img sizes={i[0].node.sizes} alt={i.description}/>
         </li>
-
-        // <li className={'big'} key={index}>
-        // {/*<Img sizes={sizes} />*/}
-        // </li>
       )
     })
 
@@ -69,7 +55,6 @@ export default class Unfiltered extends Component {
           {unfilteredSection.subheading}
         </p>
         <ul className="list-reset mx-auto">{unfilteredGallery}</ul>
-        {/* <Img resolutions={this.state.images[0].image} /> */}
       </React.Fragment>
     )
   }
