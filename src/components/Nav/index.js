@@ -35,6 +35,7 @@ export default class Nav extends Component {
   render() {
     let navStatus = this.state.navShown ? 'mobile-nav--present' : 'mobile-nav--hidden'
 
+    let color = `text-${this.props.color}` || 'text-black-lighter'
     return (
       <div className="culture-nav xl-fixed relative z-20">
         <div className="xl-hidden flex justify-between p-4 md-px-16 xl-px-4 z-30 relative z-30 bg-white xl-bg-transparent">
@@ -140,7 +141,7 @@ export default class Nav extends Component {
             </span>
           </a>
         </nav>
-        <span className="culture-nav__text text-black-lighter hidden xl-inline-block">
+        <span className={"culture-nav__text hidden xl-inline-block " + color}>
           {(this.props.highlight[0] && this.props.highlight[0].name) || ''}
         </span>
       </div>
