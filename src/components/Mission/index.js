@@ -1,18 +1,21 @@
-import React, { Component } from 'react'
-import MtnIllustration from '../../images/mission/bottom-illustration.svg'
-import MiddleClouds from '../../images/mission/middle-clouds.svg'
+import React, { Component } from 'react';
+import MtnIllustration from '../../images/mission/bottom-illustration.svg';
+import MiddleClouds from '../../images/mission/middle-clouds.svg';
 
 export default class Mission extends Component {
   render() {
     return (
       <section className="mission-section mt-64">
-        <div className="relative">
-          <img
-            className="mission-section__middle-clouds center-absolute"
-            src={MiddleClouds}
-            alt=""
-          />
-          <h2 className="text-center uppercase mb-16 md-mb-32 text-tile-blue max-w-xs mx-auto">
+        <div
+          className="relative pt-32 pb-16 mb-16 md-mb-32 "
+          style={{
+            backgroundImage: 'url(' + MiddleClouds + ')',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%',
+            backgroundPosition: 'center'
+          }}
+        >
+          <h2 className="text-center uppercase text-tile-blue max-w-xs mx-auto">
             <span className="block text-xl mission__accents text-hothouse">
               Our Mission
             </span>
@@ -34,6 +37,7 @@ export default class Mission extends Component {
           alt=""
         />
       </section>
-    )
+    );
   }
+  MiddleClouds;
 }
