@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import MtnIllustration from '../../images/mission/bottom-illustration.svg';
-import MiddleClouds from '../../images/mission/middle-clouds.svg';
+import React, { Component } from 'react'
+import MtnIllustration from '../../images/mission/bottom-illustration.svg'
+import MiddleClouds from '../../images/mission/middle-clouds.svg'
 
 export default class Mission extends Component {
   render() {
@@ -22,7 +22,7 @@ export default class Mission extends Component {
             <div className="text-2xl md-text-4-5xl font-normal">
               <span className="block">The Unknown</span>
               <span className="block font-bold">Equals</span>
-              <span className="block">Opportunity</span>
+              <span className="block">Opportunity.</span>
             </div>
           </h2>
         </div>
@@ -37,7 +37,7 @@ export default class Mission extends Component {
           alt=""
         />
       </section>
-    );
+    )
   }
-  MiddleClouds;
+  MiddleClouds
 }
