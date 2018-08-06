@@ -48,7 +48,7 @@ export default class Tile extends Component {
         </div>
         <div
           className={
-            'flex flex-col justify-around items-center tile__slide absolute pin-t pin-b pin-r pin-l ' +
+            'flex flex-col justify-around items-center tile__slide absolute pin-t pin-b pin-r pin-l py-8 ' +
             (this.state.clicked ? 'tile__slide--present' : '')
           }
           style={{ backgroundColor: this.props.color }}

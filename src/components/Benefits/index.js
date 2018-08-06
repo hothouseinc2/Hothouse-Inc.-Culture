@@ -25,7 +25,7 @@ export default class Benefits extends Component {
         <p className="text-black-lighter text-lg md-text-2xl md-font-semibold text-grey-darker text-center mb-8 md-mb-20 px-4">
           {uniqueEnvironment.description}
         </p>
-        <div className="mx-auto max-w-xl px-4 md-px-0">
+        <div className="mx-auto max-w-lg lg-max-w-xl px-4 md-px-0">
           <ul className="flex flex-col md-flex-row md-flex-wrap -mx-4 px-4 lg-px-0 lg-px-0 mb-24">
             {benefits}{' '}
           </ul>
