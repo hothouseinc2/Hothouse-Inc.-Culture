@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import Logo from '../../images/hothouse-logo.svg'
-
-import TopClouds from '../../images/mission/top-clouds.svg'
+import React, { Component } from 'react';
+import Logo from '../../images/hothouse-logo.svg';
+import TopClouds from '../../images/mission/top-clouds.svg';
 
 export default class Introduction extends Component {
   render() {
-    let { edges } = this.props.data
-    let header = edges.filter(i => i.node.frontmatter.id === 'header')[0].node.frontmatter
+    let { edges } = this.props.data;
+    let header = edges.filter(i => i.node.frontmatter.id === 'header')[0].node
+      .frontmatter;
 
     let video = {
       __html: `<div style="padding:56.25% 0 0 0;position:relative;"><iframe src=${
         header.video
       } style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>`
-    }
+    };
     return (
       <React.Fragment>
         <header ref="introduction">
@@ -30,10 +30,10 @@ export default class Introduction extends Component {
             style={{
               backgroundImage: 'url(' + TopClouds + ')',
               backgroundRepeat: 'no-repeat',
-              backgroundSize: '100%',
+              backgroundSize: '100% auto',
               backgroundPosition: 'center'
             }}
-            className="w-full"
+            className="w-full py-32"
           >
             <div className="max-w-xl mx-auto" dangerouslySetInnerHTML={video}>
               {/* <video className="h-auto" src="https://player.vimeo.com/external/85569724.sd.webm?s=43df5df0d733011263687d20a47557e4" controls></video> */}
@@ -41,6 +41,6 @@ export default class Introduction extends Component {
           </div>
         </header>
       </React.Fragment>
-    )
+    );
   }
 }
