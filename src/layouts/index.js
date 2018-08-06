@@ -52,8 +52,8 @@ export default class TemplateWrapper extends Component {
             { name: 'theme-color', content: '#F7484E' }
           ]}
           link={[
-            { rel: 'shortcut icon', href: 'assets/favicon.ico', type: 'image/x-icon' },
-            { rel: 'icon', href: 'assets/favicon.ico', type: 'image/x-icon' }
+            { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' },
+            { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }
           ]}
         >
           <html lang="en" />
