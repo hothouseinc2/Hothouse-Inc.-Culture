@@ -19,7 +19,7 @@ export default class Tile extends Component {
 
   render() {
     let color = this.props.color.split(',')
-    color[3] = ` ${0.5})`
+    color[3] = ` ${0.7})`
     color.join()
     return (
       <li className="tile w-96 h-96 lg-w-120 lg-h-120 relative list-reset mx-auto max-w-full mb-8 cursor-pointer overflow-hidden">
