@@ -28,6 +28,7 @@ export default class IndexPage extends Component {
     }
 
     this.isInView = this.isInView.bind(this)
+    this.colorChange = this.colorChange.bind(this)
   }
 
   componentDidMount() {
@@ -41,6 +42,12 @@ export default class IndexPage extends Component {
       block: 'start',
       behavior: 'smooth'
     })
+  }
+
+  colorChange = (color) => {
+this.setState({
+  color
+})
   }
 
   isInView = (name, inView, percentage) => {
@@ -66,7 +73,7 @@ export default class IndexPage extends Component {
 
     return (
       <React.Fragment>
-        <Nav handleClick={e => this.handleClick(e)} highlight={toHighlight} />
+        <Nav handleClick={e => this.handleClick(e)} highlight={toHighlight} color={this.state.color}/>
 
         <div className="welcome-section">
           <div ref="introduction" />
@@ -74,6 +81,7 @@ export default class IndexPage extends Component {
             <ScrollPercentage
               onChange={(percentage, inView) => {
                 this.isInView('Meet Us', inView, percentage)
+                this.colorChange('grey-lighter')
               }}
             >
               <Introduction data={this.props.data.allMarkdownRemark} />
@@ -82,6 +90,7 @@ export default class IndexPage extends Component {
             <ScrollPercentage
               onChange={(percentage, inView) => {
                 this.isInView('Mission', inView, percentage)
+                this.colorChange('black-lighter')
               }}
             >
               <div ref="mission" />
@@ -93,6 +102,8 @@ export default class IndexPage extends Component {
           <ScrollPercentage
             onChange={(percentage, inView) => {
               this.isInView('Values', inView, percentage)
+                this.colorChange('black-lighter')
+
             }}
           >
             <section className="values-section max-w-2xl px-4 mx-auto md-pb-16 py-16">
@@ -111,6 +122,8 @@ export default class IndexPage extends Component {
         <ScrollPercentage
           onChange={(percentage, inView) => {
             this.isInView('Work Environment', inView, percentage)
+                this.colorChange('black-lighter')
+
           }}
         >
           <section className="benefits-section bg-grey pt-16 md-pt-32 pb-16">
@@ -128,6 +141,7 @@ export default class IndexPage extends Component {
           <ScrollPercentage
             onChange={(percentage, inView) => {
               this.isInView('Location', inView, percentage)
+                this.colorChange('grey-lighter')
             }}
           >
             <div ref="location" />
@@ -145,6 +159,7 @@ export default class IndexPage extends Component {
           <ScrollPercentage
             onChange={(percentage, inView) => {
               this.isInView('Photo Gallery', inView, percentage)
+                this.colorChange('black-lighter')
             }}
           >
             <Unfiltered
