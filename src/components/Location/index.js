@@ -25,7 +25,7 @@ export default class Location extends Component {
           <div className="flex flex-col h-120 w-full md-w-3-5">
             <div className="bg-location flex-1 p-4">
               <blockquote className="text-xl md-text-2xl text-black mx-auto md-mx-0 max-w-sm md-mt-8 pb-4">
-                {i.quotation}
+                "{i.quotation}"
               </blockquote>
               <hr className="border-b border-black-light mb-2 mx-auto md-mx-0 max-w-xs " />
               <cite className="text-xl mx-auto md-mx-0 font-thin max-w-xs roman block">
