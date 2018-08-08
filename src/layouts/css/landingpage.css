@@ -354,13 +354,6 @@ h2 {
   transition: all 0.2s ease;
 }
 
-/* .nav-icon__inner {
-  &:hover, &:focus {
-    opacity: 1;
-    fill: transparent;
-  }
-} */
-
 .slider {
   &-decorator-0 {
     /* Previous */

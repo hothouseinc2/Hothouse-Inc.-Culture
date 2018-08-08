@@ -8,7 +8,7 @@ export default class Values extends Component {
       <li className="w-full md-w-1-2 lg-w-1-3 mb-16 md-mb-32" key={index}>
         <div>
           <div className="mb-8 w-64 h-64 relative mx-auto flex justify-center">
-            <img className="absolute pin-b" src={i.icon} alt="" />
+            <img className="absolute pin-b pin-r pin-l" src={i.icon} alt="" />
           </div>
           <div className="max-w-xs mx-auto">
             <h3 className="mb-4 uppercase text-black-light text-xl md-text-3xl font-medium">
