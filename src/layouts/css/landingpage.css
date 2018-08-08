@@ -167,7 +167,7 @@ h2 {
   }
 }
 
-@supports (display: grid) {
+@supports (grid-template-areas: 'a';) {
   .unfiltered-section {
     ul {
       display: grid;
