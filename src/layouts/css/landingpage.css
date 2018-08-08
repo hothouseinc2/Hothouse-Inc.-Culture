@@ -60,6 +60,8 @@
   ul img {
     position: absolute;
     max-width: none;
+    right: 50%;
+    transform: (50%, 0);
   }
 }
 
