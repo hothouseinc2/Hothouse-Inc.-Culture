@@ -29,11 +29,9 @@ export default class Mission extends Component {
           solutions. We look for answers in unlikely places and bring unexpected thinking
           to all our clients’ challenges.{' '}
         </p>
-        <img
-          className="max-w-3xl px-4 block mx-auto pb-8 w-full"
-          src={MtnIllustration}
-          alt=""
-        />
+        <div className="max-w-3xl px-4 block mx-auto pb-8 w-full">
+          <img className="block mx-auto w-full h-auto" src={MtnIllustration} alt="" />
+        </div>
       </section>
     )
   }
