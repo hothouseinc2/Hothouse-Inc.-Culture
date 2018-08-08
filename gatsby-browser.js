@@ -5,6 +5,21 @@ exports.onClientEntry = () => {
     console.log(`👍 IntersectionObserver is polyfilled`)
   }
 
+  if (!String.prototype.includes) {
+    String.prototype.includes = function(search, start) {
+        'use strict';
+        if (typeof start !== 'number') {
+            start = 0;
+         }    
+
+         if (start + search.length > this.length) {
+             return false;
+        } else {
+            return this.indexOf(search, start) !== -1;
+       }
+    };
+}
+
   // Object-fit/Object-position polyfill for gatsby-image (IE)
   // const testImg = document.createElement(`img`)
   // if (

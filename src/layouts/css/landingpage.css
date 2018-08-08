@@ -59,11 +59,13 @@
 .values-section {
   ul img {
     position: absolute;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     max-width: none;
   }
+}
+
+.mission-section__clouds {
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
 
 h2 {
@@ -273,13 +275,13 @@ h2 {
   position: absolute;
   bottom: 0%;
   left: 20vw;
-  float:right;
+  float: right;
   transform: translateY(-50%);
   font-size: 56px;
 }
 
 .slider-control-centerleft button {
-  float:right;
+  float: right;
 }
 
 .slider-control-centerright {
@@ -316,6 +318,7 @@ h2 {
     background: rgba(65, 89, 116, 0.5);
   }
 }
+
 @media screen and (min-width: 768px) {
   .slider-control-centerleft {
     right: 65%;
@@ -399,5 +402,12 @@ h2 {
         font-family: SSAir;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .mission-section__clouds {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 }

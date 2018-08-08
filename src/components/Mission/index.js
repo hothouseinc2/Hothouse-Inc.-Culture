@@ -5,13 +5,11 @@ import MiddleClouds from '../../images/mission/middle-clouds.svg'
 export default class Mission extends Component {
   render() {
     return (
-      <section className="mission-section mt-64">
+      <section className="mission-section mt-32 xxl-mt-64">
         <div
-          className="relative pt-32 pb-16 mb-16 md-mb-32 "
+          className="relative mission-section__clouds pt-32 pb-16 mb-16 lg-mb-32 "
           style={{
             backgroundImage: 'url(' + MiddleClouds + ')',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 100%',
             backgroundPosition: 'center'
           }}
         >
