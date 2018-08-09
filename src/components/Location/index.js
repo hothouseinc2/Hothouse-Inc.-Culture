@@ -50,8 +50,8 @@ export default class Location extends Component {
     return (
       <React.Fragment>
         <Carousel dragging={true}>
-          <div className="bg-blue c-height text-white text-center w-full mx-auto">
-            <div className="max-w-mdlg mx-auto px-4 md-pd-0">
+          <div className="bg-blue c-height text-white text-center">
+            <div className="max-w-mdlg mx-auto px-4 md-pd-0 w-full">
               <img src={SmallCityIllustration} alt="" className="mb-16 md-mb-8" />
               <h2 className="uppercase text-2xl md-text-4-5xl mb-4 max-w-lg mx-auto">
                 {location.headline}

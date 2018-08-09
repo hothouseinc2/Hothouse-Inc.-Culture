@@ -311,17 +311,12 @@ h2 {
 }
 
 .c-height {
-  /* @apply pt-16 pb-32; */
   @apply flex flex-col justify-center;
   min-height: 800px;
   height: 799px;
 }
 
 @media screen and (min-width: 1200px) {
-  .c-height {
-    /* @apply pt-32 pb-64; */
-  }
-
   .culture-nav {
     transform: rotate(90deg) translateY(-50%);
     left: -80px;
