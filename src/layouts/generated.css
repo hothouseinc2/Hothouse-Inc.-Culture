@@ -1008,16 +1008,6 @@ h2 span {
   transition: all .5s ease;
 }
 
-.unfiltered-section ul {
-  display: flex;
-}
-
-.unfiltered-section .big,
-.unfiltered-section .small {
-  height: 300px;
-  width: 300px;
-}
-
 .footer__icon g,
 .footer__icon path {
   transition: all .2s ease;
@@ -1030,6 +1020,32 @@ h2 span {
   fill: #fff;
 }
 
+.unfiltered-section ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.unfiltered-section .big {
+  height: 300px;
+  width: 300px;
+}
+
+.unfiltered-section .big div {
+  height: 100%;
+  width: 100%;
+}
+
+.unfiltered-section .small {
+  height: 300px;
+  width: 300px;
+}
+
+.unfiltered-section .small div {
+  height: 100%;
+  width: 100%;
+}
+
 @supports (grid-template-areas:"a") {
   .unfiltered-section ul {
     display: grid;
@@ -1038,13 +1054,15 @@ h2 span {
     justify-content: center;
     grid-auto-rows: 360px;
     grid-auto-flow: dense;
+    flex-direction: unset;
+    flex-wrap: unset;
   }
 
   .unfiltered-section .big {
-    height: unset;
-    width: unset;
     grid-row: span 1;
     grid-column: span 1;
+    height: unset;
+    width: unset;
   }
 
   .unfiltered-section .big div {
@@ -1053,10 +1071,10 @@ h2 span {
   }
 
   .unfiltered-section .small {
-    height: unset;
-    width: unset;
     grid-row: span 1;
     grid-column: span 1;
+    height: unset;
+    width: unset;
   }
 
   .unfiltered-section .small div {
