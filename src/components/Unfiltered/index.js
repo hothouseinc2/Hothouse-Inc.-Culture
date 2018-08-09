@@ -25,6 +25,16 @@ export default class Unfiltered extends Component {
     let unfilteredSection = this.props.unfiltered
     // console.log(unfilteredSection.gallery.galleryImages)
     let newImages = []
+    const objFit = props.objFit ? props.objFit : `cover`
+    const objPosition = props.objPosition ? props.objPosition : `50% 50%`
+    const fontFamily = `"object-fit: ${objFit}; object-position: ${objPosition}"`
+
+    const imgStyle = {
+      objectFit: objFit,
+      objectPosition: objPosition,
+      fontFamily: fontFamily
+    }
+
     unfilteredSection.gallery.galleryImages.map(i => {
       let item = this.props.optimImages.filter(x =>
         i.image.includes(x.node.sizes.originalName)
@@ -41,7 +51,7 @@ export default class Unfiltered extends Component {
       }
       return (
         <li className={id} key={index}>
-          <Img sizes={i[0].node.sizes} alt={i.description}/>
+          <Img sizes={i[0].node.sizes} alt={i.description} imgStyle={{ ...imgStyle }} />
         </li>
       )
     })
