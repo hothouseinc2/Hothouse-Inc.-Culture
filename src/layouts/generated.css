@@ -931,7 +931,7 @@ ul {
   position: absolute;
   max-width: none;
   right: 50%;
-  transform: (50%, 0);
+  transform: translate(50%);
 }
 
 .mission-section__clouds {

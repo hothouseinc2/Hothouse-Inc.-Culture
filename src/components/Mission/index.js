@@ -35,5 +35,4 @@ export default class Mission extends Component {
       </section>
     )
   }
-  MiddleClouds
 }
