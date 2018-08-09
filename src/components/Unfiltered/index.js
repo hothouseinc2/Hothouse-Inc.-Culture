@@ -25,8 +25,8 @@ export default class Unfiltered extends Component {
     let unfilteredSection = this.props.unfiltered
     // console.log(unfilteredSection.gallery.galleryImages)
     let newImages = []
-    const objFit = props.objFit ? props.objFit : `cover`
-    const objPosition = props.objPosition ? props.objPosition : `50% 50%`
+    const objFit = `cover`
+    const objPosition = `50% 50%`
     const fontFamily = `"object-fit: ${objFit}; object-position: ${objPosition}"`
 
     const imgStyle = {
