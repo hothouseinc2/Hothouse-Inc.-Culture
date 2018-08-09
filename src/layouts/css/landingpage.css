@@ -159,10 +159,7 @@ h2 {
 
 .unfiltered-section {
   ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    @apply flex flex-row flex-wrap justify-center;
   }
 
   .big {
@@ -317,6 +314,7 @@ h2 {
   /* @apply pt-16 pb-32; */
   @apply flex flex-col justify-center;
   min-height: 800px;
+  height: 799px;
 }
 
 @media screen and (min-width: 1200px) {

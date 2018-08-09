@@ -23,7 +23,6 @@ export default class Unfiltered extends Component {
 
   render() {
     let unfilteredSection = this.props.unfiltered
-    // console.log(unfilteredSection.gallery.galleryImages)
     let newImages = []
     const objFit = `cover`
     const objPosition = `50% 50%`

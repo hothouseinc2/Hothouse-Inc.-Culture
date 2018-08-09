@@ -1024,6 +1024,7 @@ h2 span {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .unfiltered-section .big {
