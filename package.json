@@ -5,7 +5,6 @@
   "author": "Taylor Bryant <taylor@bryant.io>",
   "dependencies": {
     "add": "^2.0.6",
-    "bluebird": "^3.5.1",
     "gatsby": "^1.9.277",
     "gatsby-image": "^1.0.55",
     "gatsby-link": "^1.6.39",
